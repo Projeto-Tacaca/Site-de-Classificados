@@ -1,0 +1,39 @@
+<?php
+
+
+class BaseController
+{
+      public function get($params = [])
+    {
+        echo "GET request received.";
+    }
+
+   
+    public function post($data = [])
+    {
+        echo "POST request received.";
+    }
+
+    // Metodo JSON response
+    protected function jsonResponse($data, $statusCode = 200)
+    {
+        header('Content-Type: application/json');
+        http_response_code($statusCode);
+        echo json_encode($data);
+    }
+}
+
+
+class ExampleController extends BaseController
+{
+    public function get($params = [])
+    {
+        $this->jsonResponse(['message' => 'Hello, World!', 'params' => $params]);
+    }
+}
+
+
+$controller = new ExampleController();
+$controller->get(['id' => 1]);
+
+?>
