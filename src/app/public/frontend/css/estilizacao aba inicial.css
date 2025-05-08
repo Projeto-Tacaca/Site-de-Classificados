@@ -17,7 +17,7 @@ H1 {
   text-align: center;
     background-color: #023612;
     font-size: 6rem;
-    padding-top: 50px;
+    padding-top: 20px;
     color: #f7df91;
 }
 p {
@@ -25,7 +25,7 @@ p {
    text-align: center;
     background-color: #023612;
     font-size: 2rem ;
-    height: 100px;
+    height: 65px;
     color: #ee8701; 	        
 }
 div {
@@ -143,10 +143,10 @@ button:hover {
 
 
 .navigation {
-   min-height: 500px;
-   top: -52px;
-   position: relative;
-   height: 1100px;
+   
+   top: 195px;
+   position: absolute;
+   height: 1200px;
    background-color: #023612;
    width:70px;
    box-shadow: #ee8701 10px 0px 0px;
