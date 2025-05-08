@@ -1,0 +1,221 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f7df91;
+    align-items: center;
+    justify-content: center;
+    display: flex
+    min-height: 100vh;
+    background-color: #f7df91;
+}
+H1 {
+  text-align: center;
+    background-color: #023612;
+    font-size: 6rem;
+    padding-top: 75px;
+    color: #f7df91;
+}
+p {
+    position: relative;
+   text-align: center;
+    background-color: #023612;
+    font-size: 2rem ;
+    height: 100px;
+    color: #ee8701; 	        
+}
+div {
+    position: relative;
+    text-align: center;
+}
+
+
+
+
+.search-bar {
+    
+    
+    position: relative;
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    border:#023612 1px solid;
+    min-height: 50px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+    
+}
+.search-bar input {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    width: 50%;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: width .2s ease-in-out;
+   
+    
+}
+.search-bar label {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    right:0;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.search-bar .icon{
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+
+}
+
+.search-bar .icon::after,
+.search-bar .icon::before{
+    content:"" ;
+    position: absolute;
+    display: block;
+}
+.search-bar .icon::before{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    border: 3px solid antiquewhite;
+}
+.search-bar .icon::after{
+    width: 10px;
+    height: 3px;
+    background-color: antiquewhite;
+    transform: rotate(56deg);
+    bottom: 0;
+    right: 0;
+    border-radius: 2px;
+   
+}
+.search-bar input:focus{width:300px ;}
+
+.search-bar input:focus+label .icon::after
+.search-bar input:focus+label .icon::before{
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    top: 50%;
+    left: 50%;
+    border: 0;
+    background-color: antiquewhite;
+}
+.search-bar input:focus+label .icon::before{
+transform: translate(-50%, -50%) rotate(-45deg)
+}
+.search-bar input:focus+label .icon::after{
+    transform: translate(-50%, -50%) rotate(-45deg)
+}
+
+
+
+
+
+
+button:hover {
+    background-color: #ee8701;
+    color: #023612;
+}
+
+
+
+
+
+.navigation {
+   
+   position: relative;
+   height: 1050px;
+   background-color: #023612;
+   width:70px;
+   box-shadow: #ee8701 10px 0px 0px;
+   
+   overflow-x: hidden;
+   transition: 0.5s;
+}
+.navigation:hover {
+    width: 300px;
+
+}
+.navigation ul {
+    position : absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+
+}
+.navigation ul li {
+ position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    
+}
+.navigation ul li a {
+   position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: #f7df91;
+   
+
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 1.5rem;
+}
+.navigation ul li a .icon ion-ícon {
+    position: relative;
+    font-size: 2rem;
+    z-index: 1;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+   padding-left: 10px;
+   height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+ 
+}
+.navigation ul li.active{
+    background: #ee8701;
+    color: #023612;
+}
+form {
+    align-items: center;
+    position: absolute;
+}
+
+
+
+/* Estilo do container principal */
