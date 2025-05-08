@@ -11,9 +11,7 @@ body {
     background-color: #f7df91;
     align-items: center;
     justify-content: center;
-    display: flex
-    min-height: 100vh;
-    background-color: #f7df91;
+
 }
 H1 {
   text-align: center;
