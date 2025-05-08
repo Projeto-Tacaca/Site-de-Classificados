@@ -38,7 +38,7 @@ div {
 
 .search-bar {
     
-    
+    top: 30px;
     position: relative;
     text-align: center;
     background-color: antiquewhite;
@@ -49,6 +49,7 @@ div {
     display: flex;
     align-items: center;
     overflow: hidden;
+    left: 25%;
     
     
 }
@@ -142,9 +143,10 @@ button:hover {
 
 
 .navigation {
-   
+   min-height: 500px;
+   top: -52px;
    position: relative;
-   height: 1050px;
+   height: 1100px;
    background-color: #023612;
    width:70px;
    box-shadow: #ee8701 10px 0px 0px;
