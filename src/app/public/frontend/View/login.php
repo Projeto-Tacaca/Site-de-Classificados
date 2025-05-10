@@ -16,10 +16,10 @@
 
     <form class="login-box" action="" method="post">
        <h1>Faça seu login</h1>
-        <input type="email" name="email" placeholder="E-mail">
-      <input type="password" name="senha" placeholder="Senha">
+        <input type="email" name="email" placeholder="E-mail" required>
+      <input type="password" name="senha" placeholder="Senha"   required>
       <button>Concluir</button>
-      <a href="#">Criar conta</a>
+      <a href="registro.php">Criar conta</a>
     </form>
 
     

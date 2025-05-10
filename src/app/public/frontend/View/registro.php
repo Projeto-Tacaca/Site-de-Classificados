@@ -12,18 +12,17 @@
 
     <div class="form-box">
 
-     <form action="" method="post">
+     <form action="../../../backend/Controller/registroController.php" method="post">
        <h1>Crie sua conta</h1>
 
       <div style="margin-left: 10px;">
 
-        <input type="text" name="nome" placeholder="Nome">
-        <input type="email" name="email" placeholder="E-mail">
-        <input type="tel" name="telefone" placeholder="Telefone">
-        <input type="text" name="cpf" placeholder="CPF">
-        <input type="password" name="senha" placeholder="Senha">
-        <input type="password" name="confirmSenha" placeholder="Confirmar senha">
-        <button>Concluir</button>
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="tel" name="telefone" placeholder="Telefone" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <input type="password" name="confirmSenha" placeholder="Confirmar senha" required>
+        <button type="submit">Concluir</button>
 
       </div>
      </form>
