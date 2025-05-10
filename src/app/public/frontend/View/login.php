@@ -10,16 +10,19 @@
 <body>
   <div class="container">
 
-    <div class="login-box">
+   
 
-      <h1>Faça seu login</h1>
+     
 
-      <input type="email" placeholder="E-mail">
-      <input type="password" placeholder="Senha">
+    <form class="login-box" action="" method="post">
+       <h1>Faça seu login</h1>
+        <input type="email" name="email" placeholder="E-mail">
+      <input type="password" name="senha" placeholder="Senha">
       <button>Concluir</button>
-      <a href="#">Esqueci minha senha</a>
+      <a href="#">Criar conta</a>
+    </form>
 
-    </div>
+    
     <div class="logo-box">
       <img src="../../images/imagem_2025-05-03_155311002-removebg-preview - Copia.png" alt="Logo">
       <span>VER-O-<br>ANÚNCIO</span>
