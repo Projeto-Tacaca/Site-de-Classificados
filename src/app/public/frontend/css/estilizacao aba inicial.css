@@ -16,7 +16,7 @@ body {
 H1 {
   text-align: center;
     background-color: #023612;
-    font-size: 6rem;
+    font-size: 3em;
     padding-top: 20px;
     color: #f7df91;
 }
@@ -24,7 +24,8 @@ p {
     position: relative;
    text-align: center;
     background-color: #023612;
-    font-size: 2rem ;
+    font-size: relative;
+    padding-top: 20px;
     height: 65px;
     color: #ee8701; 	        
 }
