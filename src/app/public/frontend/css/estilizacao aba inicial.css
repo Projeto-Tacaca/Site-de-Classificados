@@ -8,25 +8,26 @@
 
 body {
     min-height: 100vh;
-    background-color: #f7df91;
+    background-color: #fdf1c1;
     align-items: center;
     justify-content: center;
 
 }
 H1 {
   text-align: center;
-    background-color: #023612;
-    font-size: 6rem;
+    background-color: #2e5c3e;
+    font-size: 3em;
     padding-top: 20px;
-    color: #f7df91;
+    color: #fdf1c1;
 }
 p {
     position: relative;
    text-align: center;
-    background-color: #023612;
-    font-size: 2rem ;
+    background-color: #2e5c3e;
+    font-size: relative;
+    padding-top: 20px;
     height: 65px;
-    color: #ee8701; 	        
+    color: #f0b340; 	        
 }
 div {
     position: relative;
@@ -43,7 +44,7 @@ div {
     text-align: center;
     background-color: antiquewhite;
     border-radius: 30px;
-    border:#023612 1px solid;
+    border:#2e5c3e 1px solid;
     min-height: 50px;
     width: 50%;
     display: flex;
@@ -134,8 +135,8 @@ transform: translate(-50%, -50%) rotate(-45deg)
 
 
 button:hover {
-    background-color: #ee8701;
-    color: #023612;
+    background-color: #f0b340;
+    color: #2e5c3e;
 }
 
 
@@ -147,7 +148,7 @@ button:hover {
    top: 195px;
    position: absolute;
    height: 1200px;
-   background-color: #023612;
+   background-color: #2e5c3e;
    width:70px;
    box-shadow: #ee8701 10px 0px 0px;
    
@@ -179,7 +180,7 @@ button:hover {
     display: flex;
     width: 100%;
     text-decoration: none;
-    color: #f7df91;
+    color: #fdf1c1;
    
 
 }
@@ -208,8 +209,8 @@ button:hover {
  
 }
 .navigation ul li.active{
-    background: #ee8701;
-    color: #023612;
+    background: #f0b340;
+    color: #2e5c3e;
 }
 form {
     align-items: center;
