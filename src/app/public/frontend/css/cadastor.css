@@ -79,7 +79,7 @@ body {
 }
 
 .logo-area img {
-  width: 160px;
+  width: 250px; /* Aumenta o tamanho da imagem */
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
