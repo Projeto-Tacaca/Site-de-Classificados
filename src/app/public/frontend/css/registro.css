@@ -22,14 +22,14 @@ body {
 
 .form-box {
   background-color: #2f5735;
-  padding: 40px;
-  border-radius: 50px;
+  padding: 40px 60px; /* Aumenta a largura interna */
+  border-radius: 30px; /* Cantos menos arredondados */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  width: 360px;
+  width: 600px; /* Mais largura → forma mais retangular */
   max-width: 100%;
   box-sizing: border-box;
   margin: 10px;
-  flex: 1 1 360px; /* Flexível mas respeita o tamanho original */
+  flex: 1 1 600px; /* Ajustado à nova largura */
 }
 
 .form-box h1 {
