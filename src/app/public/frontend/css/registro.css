@@ -13,20 +13,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   padding: 20px;
-  max-width: 100%;
+  max-width: 1100px; /* Novo limite para telas grandes */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  width: 100%;
 }
 
 .form-box {
   background-color: #2f5735;
-  padding: 30px;
-  border-radius: 30px;
+  padding: 40px;
+  border-radius: 50px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  width: 320px;
+  width: 360px;
   max-width: 100%;
   box-sizing: border-box;
   margin: 10px;
+  flex: 1 1 360px; /* Flexível mas respeita o tamanho original */
 }
 
 .form-box h1 {
@@ -37,37 +40,42 @@ body {
 }
 
 .form-box input {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
+  width: 95%;
+  margin-right: auto;
+  display: block;
+  padding: 14px;
+  margin: 10px 0;
   border: none;
-  border-radius: 10px;
-  font-size: 16px;
+  border-bottom: 2px solid #f1ebb8;
+  border-radius: 20px;
+  font-size: 18px;
   background-color: #f4dfb6;
   color: #2f5735;
 }
 
 .form-box input::placeholder {
   color: #627e60;
+  font-size: 16px;
 }
 
 .form-box button {
   width: 100%;
-  padding: 10px;
-  margin-top: 15px;
+  padding: 14px;
+  margin-top: 20px;
   background-color: #f4b938;
   border: none;
   color: #2f5735;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: 30px;
   cursor: pointer;
 }
 
 .logo-area {
-  margin-left: 40px;
-  text-align: center;
   margin: 10px;
+  text-align: center;
+  max-width: 300px; /* Limite para não ficar muito largo */
+  flex: 1 1 300px; /* Cresce com limite */
 }
 
 .logo-area img {
@@ -75,6 +83,7 @@ body {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  border-radius: 20px;
 }
 
 .logo-area h2 {
@@ -87,14 +96,9 @@ body {
   display: block;
 }
 
-
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-  }
-
-  .logo-area {
-    margin-left: 0;
   }
 
   .form-box,
