@@ -17,16 +17,16 @@ H1 {
   text-align: center;
     background-color: #2e5c3e;
     font-size: 3em;
-    padding-top: 20px;
+    padding-top: 50px;
     color: #fdf1c1;
 }
 p {
     position: relative;
    text-align: center;
     background-color: #2e5c3e;
-    font-size: relative;
+    font-size: 1.5rem;
     padding-top: 20px;
-    height: 65px;
+    height: 90px;
     color: #f0b340; 	        
 }
 div {
@@ -145,12 +145,12 @@ button:hover {
 
 .navigation {
    
-   top: 195px;
-   position: absolute;
+   top: -52px;
+   position: relative;
    height: 1200px;
    background-color: #2e5c3e;
    width:70px;
-   box-shadow: #ee8701 10px 0px 0px;
+   box-shadow: #f0b340 10px 0px 0px;
    
    overflow-x: hidden;
    transition: 0.5s;
