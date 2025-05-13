@@ -12,19 +12,20 @@
 
     <div class="form-box">
 
-      <h1>Crie sua conta</h1>
+     <form action="../../../backend/Controller/registroController.php" method="post">
+       <h1>Crie sua conta</h1>
 
       <div style="margin-left: 10px;">
 
-        <input type="text" placeholder="Nome">
-        <input type="email" placeholder="E-mail">
-        <input type="tel" placeholder="Telefone">
-        <input type="text" placeholder="CPF">
-        <input type="password" placeholder="Senha">
-        <input type="password" placeholder="Confirmar senha">
-        <button>Concluir</button>
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="tel" name="telefone" placeholder="Telefone" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <input type="password" name="confirmSenha" placeholder="Confirmar senha" required>
+        <button type="submit">Concluir</button>
 
       </div>
+     </form>
     </div>
     <div class="logo-area">
       <img src="../../images/imagem_2025-05-03_155311002-removebg-preview - Copia.png" alt="Logo">
