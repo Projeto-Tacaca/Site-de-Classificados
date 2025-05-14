@@ -1,4 +1,4 @@
-body {
+body { 
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #fdf1c1;
@@ -81,8 +81,8 @@ body {
 }
 
 .logo-box img {
-  width: 80px;
-  height: 80px;
+  width: 40%;
+  height: auto;
   margin-bottom: 10px;
 }
 
@@ -111,8 +111,8 @@ body {
   }
 
   .logo-box img {
-    width: 60px;
-    height: 60px;
+    width: 30%;
+    height: auto;
   }
 
   .logo-box span {
@@ -127,8 +127,8 @@ body {
   }
 
   .logo-box img {
-    width: 120px;
-    height: 120px;
+    width: 70%;
+    height: auto;
   }
 
   .logo-box span {
@@ -142,5 +142,51 @@ body {
 
   .login-box h1 {
     font-size: 32px;
+  }
+}
+
+/* NOVO: Responsividade para celulares médios (ex: iPhone 6/7/8, iPhone X, Androids comuns) */
+@media (min-width: 360px) and (max-width: 414px) {
+  .container {
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .login-box {
+    padding: 25px 15px;
+    gap: 15px;
+  }
+
+  .logo-box img {
+    width: 50%;
+  }
+
+  .logo-box span {
+    font-size: 18px;
+  }
+}
+
+/* NOVO: Responsividade para tablets (ex: iPad retrato 768px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .container {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .login-box {
+    padding: 40px 30px;
+    max-width: 320px;
+  }
+
+  .login-box h1 {
+    font-size: 26px;
+  }
+
+  .logo-box img {
+    width: 50%;
+  }
+
+  .logo-box span {
+    font-size: 22px;
   }
 }
