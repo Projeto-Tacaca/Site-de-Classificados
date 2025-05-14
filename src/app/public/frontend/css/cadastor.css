@@ -105,4 +105,9 @@ body {
   .logo-area {
     width: 90%;
   }
+
+  .logo-area img {
+    position: relative;
+    top: -20px; /* Ajuste o valor conforme necessário */
+  }
 }
