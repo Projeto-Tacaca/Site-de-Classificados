@@ -28,6 +28,11 @@ session_start();
 </form>
 </div>
 
+    <div class="card-itens">
+                   <?php  include '../../../backEnd/Controller/listarAnunciosController.php';?>
+
+                </div>
+
         <!-- barra lateral -->
         <div class="navigation">
             <ul>
@@ -88,6 +93,11 @@ session_start();
                 list.forEach((item) =>
                  item.addEventListener('click', activeLink));
             </script>
+
+
+            
         </div>
+
+          
 </body>
 </html>

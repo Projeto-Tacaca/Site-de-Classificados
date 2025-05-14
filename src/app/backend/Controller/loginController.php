@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
             // Redireciona para a página inicial
             echo "<script>alert('Login realizado com sucesso!');</script>";
-            echo "<script>window.location.href = '../../public/frontend/View/tela de anuncios.php';</script>";
+            echo "<script>window.location.href = '../../public/frontend/View/telaDeAnuncios.php';</script>";
             exit();
 
         }
