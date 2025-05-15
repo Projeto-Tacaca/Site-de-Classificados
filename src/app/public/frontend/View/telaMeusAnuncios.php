@@ -78,12 +78,16 @@
       color: #f2deb0;
       font-size: 16px;
     }
+    a{
+      color: #f2deb0;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
 
   <div class="header">
-    <div class="back-arrow">&#8592;</div>
+    <div class="back-arrow"><a href="telaDeAnuncios.php">&#8592;</a></div>
     <div>Meus anuncios</div>
   </div>
 
