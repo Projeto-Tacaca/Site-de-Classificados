@@ -49,7 +49,7 @@ session_start();
                 </li>
                 </li>
                 <li class="list">
-                    <a href="#">
+                    <a href="telaMeusAnuncios.php">
                         <span class="icon"><ion-icon name="grid-outline"></ion-icon></span>
                         <span class="title">meus anuncios</span>   
                     </a>
