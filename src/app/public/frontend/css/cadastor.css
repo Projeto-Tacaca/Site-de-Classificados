@@ -15,42 +15,42 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
-  max-width: 1100px; /* Novo limite para telas grandes */
-  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 1100px;
+  margin: 0 auto;
   width: 100%;
 }
 
 .form-box {
   background-color: #2f5735;
-  padding: 40px 60px; /* Aumenta a largura interna */
-  border-radius: 30px; /* Cantos menos arredondados */
+  padding: 15px 20px; /* Margem interna ainda menor */
+  border-radius: 30px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  width: 600px; /* Mais largura → forma mais retangular */
+  width: 600px;
   max-width: 100%;
   box-sizing: border-box;
   margin: 10px;
-  flex: 1 1 600px; /* Ajustado à nova largura */
+  flex: 1 1 600px;
 }
 
 .form-box h1 {
   color: #f9eec5;
   font-size: 28px;
   margin-bottom: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 .form-box input {
-  width: 95%;
-  margin-right: auto;
+  width: 90%;
   display: block;
+  margin: 10px auto;
   padding: 14px;
-  margin: 10px 0;
   border: none;
   border-bottom: 2px solid #f1ebb8;
   border-radius: 20px;
   font-size: 18px;
   background-color: #f4dfb6;
   color: #2f5735;
+  box-sizing: border-box;
 }
 
 .form-box input::placeholder {
@@ -74,40 +74,88 @@ body {
 .logo-area {
   margin: 10px;
   text-align: center;
-  max-width: 300px; /* Limite para não ficar muito largo */
-  flex: 1 1 300px; /* Cresce com limite */
+  max-width: 300px;
+  flex: 1 1 300px;
 }
 
 .logo-area img {
-  width: 250px; /* Aumenta o tamanho da imagem */
-  max-width: 100%;
+  width: 100%;
+  max-width: 250px;
   height: auto;
   margin-bottom: 10px;
   border-radius: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
 .logo-area h2 {
   color: #2f5735;
   font-size: 26px;
   margin: 0;
+  text-align: center;
 }
 
 .logo-area h2 span {
   display: block;
 }
 
-@media (max-width: 768px) {
+/* Tablets */
+@media (max-width: 1024px) {
   .container {
     flex-direction: column;
+    align-items: stretch;
   }
 
   .form-box,
   .logo-area {
-    width: 90%;
+    width: 95%;
+    flex: none;
+  }
+
+  .form-box {
+    padding: 12px 15px;
+  }
+
+  .form-box input,
+  .form-box button {
+    font-size: 16px;
   }
 
   .logo-area img {
-    position: relative;
-    top: -20px; /* Ajuste o valor conforme necessário */
+    width: 90%;
+  }
+}
+
+/* Celulares e iPhones */
+@media (max-width: 600px) {
+  .form-box {
+    padding: 10px 12px;
+  }
+
+  .form-box h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .form-box input,
+  .form-box button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .logo-area {
+    text-align: center;
+  }
+
+  .logo-area h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .logo-area img {
+    width: 100%;
+    top: 0;
   }
 }
