@@ -1,318 +1,168 @@
+<?php
+session_start();
+if (!isset($_SESSION['anuncios'])) {
+    $_SESSION['anuncios'] = [];
+}
+
+// Função para gerar um ID único simples
+function gerarId() {
+    return uniqid();
+}
+
+// Adicionar anúncio
+if (isset($_POST['acao']) && $_POST['acao'] === 'adicionar') {
+    $titulo = trim($_POST['titulo'] ?? '');
+    $preco = trim($_POST['preco'] ?? '');
+    $descricao = trim($_POST['descricao'] ?? '');
+    $data = date('d/m/Y');
+    $imagem = '';
+    if (isset($_FILES['imagemUpload']) && $_FILES['imagemUpload']['error'] === UPLOAD_ERR_OK) {
+        $tmp = $_FILES['imagemUpload']['tmp_name'];
+        $nome = uniqid('img_') . '.' . pathinfo($_FILES['imagemUpload']['name'], PATHINFO_EXTENSION);
+        $uploadDir = __DIR__ . '/uploads';
+        if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
+        $destino = 'uploads/' . $nome;
+        move_uploaded_file($tmp, $uploadDir . '/' . $nome);
+        $imagem = $destino;
+    }
+    if ($titulo && $preco && $descricao) {
+        $_SESSION['anuncios'][] = [
+            'id' => gerarId(),
+            'titulo' => $titulo,
+            'preco' => (strpos($preco, 'R$') === 0 ? $preco : 'R$ ' . $preco),
+            'descricao' => $descricao,
+            'imagem' => $imagem ?: 'https://via.placeholder.com/60',
+            'data' => $data
+        ];
+    }
+    header('Location: ' . $_SERVER['PHP_SELF']);
+    exit;
+}
+
+// Excluir anúncio
+if (isset($_GET['excluir'])) {
+    $id = $_GET['excluir'];
+    $_SESSION['anuncios'] = array_filter($_SESSION['anuncios'], function($a) use ($id) {
+        return $a['id'] !== $id;
+    });
+    header('Location: ' . $_SERVER['PHP_SELF']);
+    exit;
+}
+
+// Editar anúncio (carregar dados)
+$anuncioEditar = null;
+if (isset($_GET['editar'])) {
+    $id = $_GET['editar'];
+    foreach ($_SESSION['anuncios'] as $a) {
+        if ($a['id'] === $id) {
+            $anuncioEditar = $a;
+            break;
+        }
+    }
+}
+// Salvar edição
+if (isset($_POST['acao']) && $_POST['acao'] === 'editar' && isset($_POST['id'])) {
+    foreach ($_SESSION['anuncios'] as &$a) {
+        if ($a['id'] === $_POST['id']) {
+            $a['titulo'] = trim($_POST['titulo'] ?? '');
+            $a['preco'] = (strpos($_POST['preco'], 'R$') === 0 ? $_POST['preco'] : 'R$ ' . $_POST['preco']);
+            $a['descricao'] = trim($_POST['descricao'] ?? '');
+            if (isset($_FILES['imagemUpload']) && $_FILES['imagemUpload']['error'] === UPLOAD_ERR_OK) {
+                $tmp = $_FILES['imagemUpload']['tmp_name'];
+                $uploadDir = __DIR__ . '/uploads';
+                if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
+                $destino = 'uploads/' . $nome;
+                move_uploaded_file($tmp, $uploadDir . '/' . $nome);
+                $a['imagem'] = $destino;
+                $a['imagem'] = $destino;
+            }
+            break;
+        }
+    }
+    unset($a);
+    header('Location: ' . $_SERVER['PHP_SELF']);
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Meus Anúncios</title>
-<<<<<<< HEAD:src/app/public/frontend/View/tela meus anuncios.html
   <script src="https://cdn.tailwindcss.com"></script>
-=======
-  <style>
-    body {
-      background-color: #f2deb0;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .header {
-      background-color: #2f5534;
-      color: #f2deb0;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      font-size: 28px;
-    }
-
-    .back-arrow {
-      font-size: 36px;
-      margin-right: 20px;
-      cursor: pointer;
-    }
-
-    .container {
-      padding: 30px 20px;
-    }
-
-    .card {
-      background-color: #2f5534;
-      border-radius: 30px;
-      padding: 20px;
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .left {
-      display: flex;
-      align-items: center;
-    }
-
-    .image-box {
-      width: 80px;
-      height: 80px;
-      background-color: #f2deb0;
-      border-radius: 20px;
-      margin-right: 20px;
-      overflow: hidden;
-    }
-
-    .image-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .info {
-      color: #f2deb0;
-      font-size: 16px;
-      line-height: 1.4;
-    }
-
-    .info .title {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .info .price {
-      margin-top: 4px;
-    }
-
-    .date {
-      color: #f2deb0;
-      font-size: 16px;
-    }
-    a{
-      color: #f2deb0;
-      text-decoration: none;
-    }
-  </style>
->>>>>>> 37672656d7bca7d23dabd7e1d16852ee427632da:src/app/public/frontend/View/telaMeusAnuncios.php
 </head>
 <body class="bg-yellow-100 font-sans min-h-screen">
-
-<<<<<<< HEAD:src/app/public/frontend/View/tela meus anuncios.html
-  <!-- Cabeçalho -->
   <header class="bg-green-800 text-white p-4 flex items-center">
     <a href="#" class="text-2xl mr-4">&#8592;</a>
     <h1 class="text-2xl font-semibold">Meus anúncios</h1>
   </header>
-
-  <!-- Formulário para novo anúncio -->
   <section class="p-4 max-w-2xl mx-auto">
-    <h2 class="text-lg font-semibold text-green-900 mb-2">Novo Anúncio</h2>
-    <form id="form-anuncio" class="space-y-4 bg-white p-4 rounded-xl shadow">
-      <input type="text" id="titulo" placeholder="Título" required class="w-full p-2 border rounded" />
-      <input type="text" id="preco" placeholder="Preço (R$)" required class="w-full p-2 border rounded" />
-      <textarea id="descricao" placeholder="Descrição do anúncio" required class="w-full p-2 border rounded"></textarea>
-      <input type="file" id="imagemUpload" class="w-full p-2 border rounded" accept="image/*" />
+    <h2 class="text-lg font-semibold text-green-900 mb-2"><?php echo $anuncioEditar ? 'Editar Anúncio' : 'Novo Anúncio'; ?></h2>
+    <form id="form-anuncio" class="space-y-4 bg-white p-4 rounded-xl shadow" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="acao" value="<?php echo $anuncioEditar ? 'editar' : 'adicionar'; ?>">
+      <?php if ($anuncioEditar): ?>
+        <input type="hidden" name="id" value="<?php echo htmlspecialchars($anuncioEditar['id']); ?>">
+      <?php endif; ?>
+      <input type="text" id="titulo" name="titulo" placeholder="Título" required class="w-full p-2 border rounded" value="<?php echo htmlspecialchars($anuncioEditar['titulo'] ?? ''); ?>" />
+      <input type="text" id="preco" name="preco" placeholder="Preço (R$)" required class="w-full p-2 border rounded" value="<?php echo isset($anuncioEditar['preco']) ? preg_replace('/^R\$\s?/', '', $anuncioEditar['preco']) : ''; ?>" />
+      <textarea id="descricao" name="descricao" placeholder="Descrição do anúncio" required class="w-full p-2 border rounded"><?php echo htmlspecialchars($anuncioEditar['descricao'] ?? ''); ?></textarea>
+      <input type="file" id="imagemUpload" name="imagemUpload" class="w-full p-2 border rounded" accept="image/*" />
       <button type="submit" class="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800">
-        Adicionar Anúncio
+        <?php echo $anuncioEditar ? 'Salvar Alterações' : 'Adicionar Anúncio'; ?>
       </button>
+      <?php if ($anuncioEditar): ?>
+        <a href="<?php echo $_SERVER['PHP_SELF']; ?>" class="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-500 transition ml-2">Cancelar Edição</a>
+      <?php endif; ?>
     </form>
   </section>
-
-  <!-- Lista de Anúncios -->
-  <main id="anuncios-lista" class="p-4 space-y-4 max-w-2xl mx-auto"></main>
-
-  <!-- Mensagem quando não há anúncios -->
-  <div id="mensagem-vazia" aria-live="polite" class="hidden flex justify-center items-center mt-12">
-    <div class="w-56 bg-white border-2 border-slate-300 rounded-xl p-6 text-center shadow-sm">
-      <div class="mb-6 flex justify-center">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 stroke-slate-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12L12 3l9 9" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 21V12h6v9" />
-        </svg>
+  <main id="anuncios-lista" class="p-4 space-y-4 max-w-2xl mx-auto">
+    <?php if (empty($_SESSION['anuncios'])): ?>
+      <div id="mensagem-vazia" aria-live="polite" class="flex justify-center items-center mt-12">
+        <div class="w-56 bg-white border-2 border-slate-300 rounded-xl p-6 text-center shadow-sm">
+          <div class="mb-6 flex justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 stroke-slate-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12L12 3l9 9" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 21V12h6v9" />
+            </svg>
+          </div>
+          <div class="space-y-2 mb-4">
+            <div class="h-2.5 bg-slate-300 rounded w-4/5 mx-auto"></div>
+            <div class="h-2.5 bg-slate-300 rounded w-3/4 mx-auto"></div>
+            <div class="h-2.5 bg-slate-300 rounded w-5/6 mx-auto"></div>
+          </div>
+          <div class="h-6 w-1/2 bg-slate-200 rounded-full mx-auto"></div>
+          <p class="mt-4 text-slate-500 font-semibold">Você ainda não tem anúncios publicados</p>
+        </div>
       </div>
-      <div class="space-y-2 mb-4">
-        <div class="h-2.5 bg-slate-300 rounded w-4/5 mx-auto"></div>
-        <div class="h-2.5 bg-slate-300 rounded w-3/4 mx-auto"></div>
-        <div class="h-2.5 bg-slate-300 rounded w-5/6 mx-auto"></div>
-      </div>
-      <div class="h-6 w-1/2 bg-slate-200 rounded-full mx-auto"></div>
-      <p class="mt-4 text-slate-500 font-semibold">Você ainda não tem anúncios publicados</p>
-    </div>
-=======
-  <div class="header">
-    <div class="back-arrow"><a href="telaDeAnuncios.php">&#8592;</a></div>
-    <div>Meus anuncios</div>
->>>>>>> 37672656d7bca7d23dabd7e1d16852ee427632da:src/app/public/frontend/View/telaMeusAnuncios.php
-  </div>
-
-  <!-- Modal de confirmação de exclusão -->
-  <div id="modal-confirmacao" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-    <div class="bg-white p-6 rounded-lg shadow-lg text-center w-80">
-      <p class="text-lg font-semibold text-green-900">Tem certeza que deseja excluir este anúncio?</p>
-      <div class="mt-4 flex justify-center gap-4">
-        <button id="confirmar-exclusao" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 transition">Excluir</button>
-        <button id="cancelar-exclusao" class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-500 transition">Cancelar</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Lista de anúncios
-    let anuncios = [];
-    const container = document.getElementById("anuncios-lista");
-    let indiceParaExcluir = null;
-    let indiceParaEditar = null;
-
-    // Submissão do formulário (adicionar/editar)
-    document.getElementById("form-anuncio").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const titulo = document.getElementById("titulo").value.trim();
-      const precoInput = document.getElementById("preco").value.trim();
-      let preco = precoInput;
-      if (preco && !/^R\$/.test(preco)) {
-        preco = `R$ ${preco}`;
-      }
-      const descricao = document.getElementById("descricao").value.trim();
-      const imagemInput = document.getElementById("imagemUpload").files[0];
-      const data = new Date().toLocaleDateString("pt-BR");
-      let imagemURL = "https://via.placeholder.com/60";
-      if (imagemInput) {
-        imagemURL = URL.createObjectURL(imagemInput);
-      }
-      // Validação extra: impedir campos em branco
-      if (!titulo || !preco || !descricao) {
-        alert('Preencha todos os campos obrigatórios.');
-        return;
-      }
-      // Validação extra: preço só números (opcional)
-      // if (!/^R\$\s?\d+(,\d{2})?$/.test(preco)) {
-      //   alert('Digite um valor válido para o preço.');
-      //   return;
-      // }
-      const novo = { titulo, preco, descricao, imagem: imagemURL, data };
-      if (indiceParaEditar !== null) {
-        // Se não enviou nova imagem, mantém a anterior
-        novo.imagem = imagemInput ? imagemURL : anuncios[indiceParaEditar].imagem;
-        anuncios[indiceParaEditar] = { ...novo };
-        indiceParaEditar = null;
-      } else {
-        anuncios.unshift(novo);
-      }
-      renderizar();
-      this.reset();
-      document.getElementById('imagemUpload').value = '';
-      document.getElementById('form-anuncio').querySelector('button[type="submit"]').innerText = 'Adicionar Anúncio';
-      mostrarCancelarEdicao();
-      this.classList.remove('ring', 'ring-blue-400');
-    });
-
-    // Editar anúncio
-    function editarAnuncio(index) {
-      const anuncio = anuncios[index];
-      document.getElementById("titulo").value = anuncio.titulo;
-      document.getElementById("preco").value = anuncio.preco.replace(/^R\$\s?/, '');
-      document.getElementById("descricao").value = anuncio.descricao;
-      document.getElementById('form-anuncio').scrollIntoView({ behavior: 'smooth' });
-      indiceParaEditar = index;
-      document.getElementById('form-anuncio').querySelector('button[type="submit"]').innerText = 'Salvar Alterações';
-      document.getElementById('form-anuncio').classList.add('ring', 'ring-blue-400');
-      mostrarCancelarEdicao();
-    }
-
-    // Remover anúncio (abre modal)
-    function removerAnuncio(index) {
-      indiceParaExcluir = index;
-      document.getElementById("modal-confirmacao").classList.remove("hidden");
-      setTimeout(() => {
-        document.getElementById("confirmar-exclusao").focus();
-      }, 100);
-    }
-
-    // Confirma exclusão
-    document.getElementById("confirmar-exclusao").addEventListener("click", function () {
-      if (indiceParaExcluir !== null) {
-        anuncios.splice(indiceParaExcluir, 1);
-        renderizar();
-      }
-      fecharModal();
-    });
-    // Cancela exclusão
-    document.getElementById("cancelar-exclusao").addEventListener("click", fecharModal);
-    function fecharModal() {
-      document.getElementById("modal-confirmacao").classList.add("hidden");
-      indiceParaExcluir = null;
-    }
-
-    // Reset do formulário (após cancelar edição)
-    document.getElementById("form-anuncio").addEventListener("reset", function () {
-      document.getElementById('form-anuncio').classList.remove('ring', 'ring-blue-400');
-      document.getElementById('form-anuncio').querySelector('button[type="submit"]').innerText = 'Adicionar Anúncio';
-      indiceParaEditar = null;
-      mostrarCancelarEdicao();
-    });
-
-    // Botão cancelar edição
-    if (!document.getElementById('cancelar-edicao')) {
-      const btnCancelar = document.createElement('button');
-      btnCancelar.type = 'button';
-      btnCancelar.id = 'cancelar-edicao';
-      btnCancelar.innerText = 'Cancelar Edição';
-      btnCancelar.className = 'bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-500 transition ml-2';
-      btnCancelar.style.display = 'none';
-      document.getElementById('form-anuncio').appendChild(btnCancelar);
-      btnCancelar.addEventListener('click', function() {
-        document.getElementById('form-anuncio').reset();
-        document.getElementById('form-anuncio').classList.remove('ring', 'ring-blue-400');
-        document.getElementById('form-anuncio').querySelector('button[type="submit"]').innerText = 'Adicionar Anúncio';
-        indiceParaEditar = null;
-        btnCancelar.style.display = 'none';
-      });
-    }
-    function mostrarCancelarEdicao() {
-      const btnCancelar = document.getElementById('cancelar-edicao');
-      if (indiceParaEditar !== null) {
-        btnCancelar.style.display = 'inline-block';
-      } else {
-        btnCancelar.style.display = 'none';
-      }
-    }
-
-    // Renderização dos cards e mensagem vazia
-    function renderizar() {
-      container.innerHTML = "";
-      if (anuncios.length === 0) {
-        document.getElementById("mensagem-vazia").classList.remove("hidden");
-      } else {
-        document.getElementById("mensagem-vazia").classList.add("hidden");
-        anuncios.forEach((anuncio, index) => {
-          const card = document.createElement("div");
-          card.className = "bg-green-800 text-yellow-100 rounded-2xl p-4 flex flex-col gap-2 shadow-md hover:shadow-xl transition duration-200";
-          card.innerHTML = `
-            <div class="flex items-center gap-4">
-              <div class="w-16 h-16 rounded-lg bg-white flex items-center justify-center overflow-hidden border-2 border-green-900">
-                <img src="${anuncio.imagem}" alt="Imagem do anúncio: ${anuncio.titulo}" class="w-full h-full object-cover"/>
-              </div>
-              <div>
-                <div class="text-lg font-semibold text-yellow-50">${anuncio.titulo}</div>
-                <div class="text-green-200 font-bold">${anuncio.preco}</div>
-              </div>
+    <?php else: ?>
+      <?php foreach (array_reverse($_SESSION['anuncios']) as $anuncio): ?>
+        <div class="bg-green-800 text-yellow-100 rounded-2xl p-4 flex flex-col gap-2 shadow-md hover:shadow-xl transition duration-200">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-lg bg-white flex items-center justify-center overflow-hidden border-2 border-green-900">
+              <img src="<?php echo htmlspecialchars($anuncio['imagem']); ?>" alt="Imagem do anúncio: <?php echo htmlspecialchars($anuncio['titulo']); ?>" class="w-full h-full object-cover"/>
             </div>
-            <p class="text-sm mt-1 text-yellow-200">${anuncio.descricao}</p>
-            <div class="flex justify-between items-center mt-2 gap-2">
-              <div class="text-xs text-green-200 flex items-center gap-1">
-                <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
-                ${anuncio.data}
-              </div>
-              <div class="flex gap-2">
-                <button onclick="editarAnuncio(${index})" class="text-xs text-blue-300 hover:text-blue-500 font-semibold transition">Editar</button>
-                <button onclick="removerAnuncio(${index})" class="text-xs text-red-300 hover:text-red-500 font-semibold transition">Excluir</button>
-              </div>
+            <div>
+              <div class="text-lg font-semibold text-yellow-50"><?php echo htmlspecialchars($anuncio['titulo']); ?></div>
+              <div class="text-green-200 font-bold"><?php echo htmlspecialchars($anuncio['preco']); ?></div>
             </div>
-          `;
-          card.tabIndex = 0;
-          card.setAttribute('aria-label', `Anúncio: ${anuncio.titulo}`);
-          container.appendChild(card);
-        });
-      }
-    }
-    renderizar();
-  </script>
+          </div>
+          <p class="text-sm mt-1 text-yellow-200"><?php echo htmlspecialchars($anuncio['descricao']); ?></p>
+          <div class="flex justify-between items-center mt-2 gap-2">
+            <div class="text-xs text-green-200 flex items-center gap-1">
+              <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
+              <?php echo htmlspecialchars($anuncio['data']); ?>
+            </div>
+            <div class="flex gap-2">
+              <a href="?editar=<?php echo urlencode($anuncio['id']); ?>" class="text-xs text-blue-300 hover:text-blue-500 font-semibold transition">Editar</a>
+              <a href="?excluir=<?php echo urlencode($anuncio['id']); ?>" class="text-xs text-red-300 hover:text-red-500 font-semibold transition" onclick="return confirm('Tem certeza que deseja excluir este anúncio?');">Excluir</a>
+            </div>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </main>
   <style>
-    /* Scrollbar customizada para lista de anúncios */
     #anuncios-lista::-webkit-scrollbar {
       height: 8px;
       background: #f2deb0;
@@ -325,25 +175,11 @@
       scrollbar-width: thin;
       scrollbar-color: #2f5534 #f2deb0;
     }
-    /* Modal animação */
-    #modal-confirmacao .bg-white {
-      animation: modalShow 0.2s;
-    }
-    @keyframes modalShow {
-      from { transform: scale(0.95); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-    /* Responsividade extra */
     @media (max-width: 500px) {
       #anuncios-lista > div {
         padding: 10px !important;
       }
-      #modal-confirmacao .bg-white {
-        width: 95vw;
-        padding: 1.5rem 0.5rem;
-      }
     }
   </style>
-
 </body>
 </html>
