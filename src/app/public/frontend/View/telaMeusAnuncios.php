@@ -4,10 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Meus Anúncios</title>
+<<<<<<< HEAD:src/app/public/frontend/View/tela meus anuncios.html
   <script src="https://cdn.tailwindcss.com"></script>
+=======
+  <style>
+    body {
+      background-color: #f2deb0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: #2f5534;
+      color: #f2deb0;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      font-size: 28px;
+    }
+
+    .back-arrow {
+      font-size: 36px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .container {
+      padding: 30px 20px;
+    }
+
+    .card {
+      background-color: #2f5534;
+      border-radius: 30px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .image-box {
+      width: 80px;
+      height: 80px;
+      background-color: #f2deb0;
+      border-radius: 20px;
+      margin-right: 20px;
+      overflow: hidden;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .info {
+      color: #f2deb0;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .info .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .info .price {
+      margin-top: 4px;
+    }
+
+    .date {
+      color: #f2deb0;
+      font-size: 16px;
+    }
+    a{
+      color: #f2deb0;
+      text-decoration: none;
+    }
+  </style>
+>>>>>>> 37672656d7bca7d23dabd7e1d16852ee427632da:src/app/public/frontend/View/telaMeusAnuncios.php
 </head>
 <body class="bg-yellow-100 font-sans min-h-screen">
 
+<<<<<<< HEAD:src/app/public/frontend/View/tela meus anuncios.html
   <!-- Cabeçalho -->
   <header class="bg-green-800 text-white p-4 flex items-center">
     <a href="#" class="text-2xl mr-4">&#8592;</a>
@@ -48,6 +132,11 @@
       <div class="h-6 w-1/2 bg-slate-200 rounded-full mx-auto"></div>
       <p class="mt-4 text-slate-500 font-semibold">Você ainda não tem anúncios publicados</p>
     </div>
+=======
+  <div class="header">
+    <div class="back-arrow"><a href="telaDeAnuncios.php">&#8592;</a></div>
+    <div>Meus anuncios</div>
+>>>>>>> 37672656d7bca7d23dabd7e1d16852ee427632da:src/app/public/frontend/View/telaMeusAnuncios.php
   </div>
 
   <!-- Modal de confirmação de exclusão -->
