@@ -1,4 +1,6 @@
 <?php
+define('BASE_URL', '/Site-de-Classificados/');
+
 require 'c:\xampp\htdocs\Site-de-Classificados\database\config.php';
 
 $querySQL = "SELECT * FROM anuncios";
@@ -17,9 +19,12 @@ if ($result->num_rows > 0){
         $titulo = $rows['titulo_anuncio'];
         $descricao = $rows['descricao'];
         $preco = $rows['preco'];
+        $caminho_img = $rows['caminho_img'];
         $data = $rows['data_criacao'];
 
     
+
+        echo "<div class = 'card'> $titulo </div>";
 
         
 
