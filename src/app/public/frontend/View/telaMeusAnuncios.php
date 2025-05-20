@@ -94,7 +94,7 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'editar' && isset($_POST['id']))
 </head>
 <body class="bg-yellow-100 font-sans min-h-screen">
   <header class="bg-green-800 text-white p-4 flex items-center">
-    <a href="#" class="text-2xl mr-4">&#8592;</a>
+    <a href="../view/telaDeAnuncios.php" class="text-2xl mr-4">&#8592;</a>
     <h1 class="text-2xl font-semibold">Meus anúncios</h1>
   </header>
   <section class="p-4 max-w-2xl mx-auto">
