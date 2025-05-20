@@ -145,9 +145,9 @@ button:hover {
 
 .navigation {
    
-   top: -22em;
-   position: relative;
-   height: 2500px;
+   top: 195px;
+   position: fixed;
+   height: 100rem;
    background-color: #2e5c3e;
    width:70px;
    box-shadow: #f0b340 10px 0px 0px;
