@@ -13,7 +13,9 @@
 <body class="bg-yellow-100 font-sans">
   <!-- Cabeçalho -->
   <header class="bg-green-800 text-white p-4 flex items-center">
-    <a href="../View/telaDeAnuncios.php" class="text-2xl mr-4" aria-label="Voltar para página anterior">&#8592;</a>
+
+    <a href="../view/telaDeAnuncios.php" class="text-2xl mr-4" aria-label="Voltar para página anterior">&#8592;</a>
+
     <h1 class="text-2xl font-semibold">Minha conta</h1>
   </header>
 
