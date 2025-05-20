@@ -27,7 +27,6 @@ if ($result->num_rows > 0){
       echo "<div class='card'>
         <img src='" . BASE_URL . "/uploads/teste.png'>
         <h2>$titulo</h2>
-        <p>$descricao</p>
         <p>Preço: R$ $preco</p>
         <p>Data de Criação: $data</p>
         <a href='detalhesAnuncio.php?id_anuncio=$id_anuncio'>Ver Detalhes</a>
