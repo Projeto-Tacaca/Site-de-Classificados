@@ -24,6 +24,13 @@
 </div>
 
     
+
+        <div class="card-layout">
+                   <?php  include '../../../backEnd/Controller/listarAnunciosController.php';?>
+
+                </div>
+
+
         <!-- barra lateral -->
         <div class="navigation">
             <ul>
@@ -83,18 +90,8 @@
                 }
                 list.forEach((item) =>
                  item.addEventListener('click', activeLink));
-            </script>
-
-
-            
+            </script>  
         </div>
-
-        <div class="card-layout">
-                   <?php  include '../../../backEnd/Controller/listarAnunciosController.php';?>
-
-                </div>
-
-
 
 
           
