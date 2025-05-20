@@ -1,0 +1,207 @@
+/* Estilo geral */
+body {
+    min-height: 100vh;
+    background-color: #fdf1c1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #2e5c3e;
+    background-color: #fdf1c1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* ...existing code... */
+
+/* Centralizar e aumentar o tamanho do container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    width: 90vw;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #fffbe9;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+/* Aumentar tamanho dos elementos internos */
+.container * {
+    font-size: 1.2rem;
+}
+
+/* ...existing code... */
+.back {
+    text-decoration: none;
+    background-color: #fdf1c1;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+/* Lista de anúncios */
+.lista {
+    padding: 20px;
+}
+
+/* Estilo dos anúncios */
+.anuncio {
+    background-color: #2e5c3e;
+    background-color: #fdf1c1;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagem-container {
+    width: 100px;
+    height: 100px;
+    background-color: #fdf1c1;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.descricao {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.preco {
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.data {
+    font-size: 14px;
+    text-align: right;
+}
+
+.anuncio img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.input-error {
+  border-color: #dc2626 !important;
+}
+.input-success {
+  border-color: #16a34a !important;
+}
+
+@media (max-width: 500px) {
+  .w-40 {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  .border-8 {
+    border-width: 4px !important;
+  }
+}
+
+/* Estilo adicional estruturado */
+.foto-perfil-container {
+  width: 160px;
+  height: 160px;
+  border-radius: 9999px;
+  border: 8px solid #facc15;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+.foto-perfil-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  z-index: 0;
+}
+.botoes-foto {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 1rem;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.foto-perfil-container:hover .botoes-foto {
+  opacity: 1;
+}
+.botao-foto {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 0.9;
+  transition: background 0.2s;
+}
+.botao-foto.verde {
+  background-color: #2e5c3e;
+  color: white;
+}
+.botao-foto.verde:hover {
+  background-color: #2e5c3e;
+}
+.botao-foto.vermelho {
+  background-color: #dc2626;
+  color: white;
+}
+.botao-foto.vermelho:hover {
+  background-color: #b91c1c;
+}
+.nome-centralizado {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 12px;
+  text-align: center;
+  max-width: 160px;
+  word-break: break-word;
+}
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-right: 0.5rem;
+}
+.campo {
+  font-size: 12px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 9999px;
+  padding: 0.25rem 1rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
