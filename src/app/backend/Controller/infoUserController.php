@@ -18,7 +18,6 @@ if ($result->num_rows === 1) {
     echo "<script>
         document.getElementById('inputNome').innerText = '{$usuario['nome']}';
         document.getElementById('inputEmail').innerText = '{$usuario['email']}';
-    
         document.getElementById('inputTelefone').innerText = '{$usuario['telefone']}';
         document.getElementById('nomeCentralizado').innerText = '{$usuario['nome']}';
     </script>";
