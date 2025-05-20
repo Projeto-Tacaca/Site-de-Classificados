@@ -270,6 +270,11 @@ form {
     font-size: 1.2rem;
     color: #fdf1c1;
 }
+.card h2 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #fdf1c1;
+}
 .card a {
   display: inline-block;
   color: #2e5c3e;
