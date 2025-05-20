@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -68,6 +71,7 @@
         </form>
       </div>
     </main>
+    <?php require "../../../backend/Controller/infoUserController.php"?>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const btnEditar = document.getElementById('editarPerfil');
