@@ -18,7 +18,7 @@
   </header>
 
   <!-- Conteúdo principal -->
-  <main class="p-6 max-w-3xl mx-auto bg-white mt-6 rounded-xl shadow-md relative">
+  <main class="container">
     <div id="feedbackMsg" class="hidden absolute top-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded shadow z-50"></div>
     
     <button id="editarPerfil" class="absolute right-4 top-4 bg-green-800 text-white px-4 py-2 rounded-lg shadow hover:bg-green-900 transition z-10" aria-label="Editar dados do perfil">Editar</button>
