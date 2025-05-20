@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fdf1c1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-box {
+  background-color: #2f5735;
+  padding: 15px 20px; /* Margem interna ainda menor */
+  border-radius: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  width: 600px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 10px;
+  flex: 1 1 600px;
+}
+
+.form-box h1 {
+  color: #f9eec5;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-box input {
+  width: 90%;
+  display: block;
+  margin: 10px auto;
+  padding: 14px;
+  border: none;
+  border-bottom: 2px solid #f1ebb8;
+  border-radius: 20px;
+  font-size: 18px;
+  background-color: #f4dfb6;
+  color: #2f5735;
+  box-sizing: border-box;
+}
+
+.form-box input::placeholder {
+  color: #627e60;
+  font-size: 16px;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background-color: #f4b938;
+  border: none;
+  color: #2f5735;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.logo-area {
+  margin: 10px;
+  text-align: center;
+  max-width: 300px;
+  flex: 1 1 300px;
+}
+
+.logo-area img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.logo-area h2 {
+  color: #2f5735;
+  font-size: 26px;
+  margin: 0;
+  text-align: center;
+}
+
+.logo-area h2 span {
+  display: block;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-box,
+  .logo-area {
+    width: 95%;
+    flex: none;
+  }
+
+  .form-box {
+    padding: 12px 15px;
+  }
+
+  .form-box input,
+  .form-box button {
+    font-size: 16px;
+  }
+
+  .logo-area img {
+    width: 90%;
+  }
+}
+
+/* Celulares e iPhones */
+@media (max-width: 600px) {
+  .form-box {
+    padding: 10px 12px;
+  }
+
+  .form-box h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .form-box input,
+  .form-box button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .logo-area {
+    text-align: center;
+  }
+
+  .logo-area h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .logo-area img {
+    width: 100%;
+    top: 0;
+  }
+}
