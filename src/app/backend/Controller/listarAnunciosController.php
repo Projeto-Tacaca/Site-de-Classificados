@@ -29,7 +29,7 @@ if ($result->num_rows > 0){
         <h2>$titulo</h2>
         <p>Preço: R$ $preco</p>
         <p>Data de Criação: $data</p>
-        <a href='detalhesAnuncio.php?id_anuncio=$id_anuncio'>Ver Detalhes</a>
+        <a href='../../../public/frontend/view/anuncio.php'>Ver Detalhes</a>
       </div>";
 
 
