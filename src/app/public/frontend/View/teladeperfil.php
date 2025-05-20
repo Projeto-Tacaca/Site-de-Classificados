@@ -9,7 +9,6 @@
   <title>Minha Conta</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="css/minhaConta.css" />
 </head>
 <body class="bg-yellow-100 font-sans">
   <!-- Cabeçalho -->

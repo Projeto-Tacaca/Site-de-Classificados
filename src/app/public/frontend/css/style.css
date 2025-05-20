@@ -1,6 +1,6 @@
 /* Estilo geral */
 body {
-    background-color: #f2ddb0;
+    background-color: #fdf1c1;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,8 +8,8 @@ body {
 
 /* Cabeçalho */
 .header {
-    background-color: #355b39;
-    color: #f2ddb0;
+    background-color: #2e5c3e;
+    background-color: #fdf1c1;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@ body {
 
 .back {
     text-decoration: none;
-    color: #f2ddb0;
+    background-color: #fdf1c1;
     font-size: 24px;
     margin-right: 15px;
 }
@@ -29,8 +29,8 @@ body {
 
 /* Estilo dos anúncios */
 .anuncio {
-    background-color: #355b39;
-    color: #f2ddb0;
+    background-color: #2e5c3e;
+    background-color: #fdf1c1;
     border-radius: 20px;
     padding: 15px;
     margin-bottom: 20px;
@@ -42,7 +42,7 @@ body {
 .imagem-container {
     width: 100px;
     height: 100px;
-    background-color: #f2ddb0;
+    background-color: #fdf1c1;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -143,11 +143,11 @@ body {
   transition: background 0.2s;
 }
 .botao-foto.verde {
-  background-color: #065f46;
+  background-color: #2e5c3e;
   color: white;
 }
 .botao-foto.verde:hover {
-  background-color: #064e3b;
+  background-color: #2e5c3e;
 }
 .botao-foto.vermelho {
   background-color: #dc2626;
