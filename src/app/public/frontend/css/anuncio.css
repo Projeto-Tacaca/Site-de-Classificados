@@ -28,7 +28,7 @@ body {
 
 .card {
   display: flex;
-  background-color: #2e5c3e;
+  background-color: #fdf1c1;
   border-radius: 10px;
   max-width: 100%;
   width: 100%;
@@ -39,7 +39,7 @@ body {
 }
 
 .image-box {
-  background-color: #2e5c3e;
+  background-color: antiquewhite;
   border-radius: 20px;
   padding: 25px;
   position: relative;
@@ -104,7 +104,7 @@ body {
   display: inline-block;
   padding: 18px 28px;
   background-color: #2e5c3e;
-  color: antiquewhite;
+  color: #fdf1c1;
   text-decoration: none;
   border-radius: 10px;
   margin-top: 20px;
