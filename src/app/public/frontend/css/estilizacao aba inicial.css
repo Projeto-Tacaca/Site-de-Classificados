@@ -245,12 +245,7 @@ form {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
-
-  background-color:#2e5c3e ;
-=======
-  background-color: x;
->>>>>>> 3722475f829fc97fa21cf346c98c2e83d6bcc396
+  background-color: #2e5c3e;
   width: 250px;
   max-height: 400px;
   min-height: 400px;
@@ -269,33 +264,34 @@ form {
 .card img {
   width: 100%;
   height: 150px;
+ 
   background-color: antiquewhite;
   object-fit: fill;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 .card p{
     height: 60px;
     background:none;
     margin-top: 0;
     font-size: 1.2rem;
-    color: #2e5c3e;
+    color: #fdf1c1;
 }
 .card #preco {
     margin-top: 0;
     margin-bottom: 10px;
-    color: #2e5c3e;
+    color: #fdf1c1;
     margin-left: 60%;
     font-size: 1rem;
 }
 
 .card h2 {
   font-size: 1.3rem;
-  color: #2e5c3e;
+  color: #fdf1c1;
 }
 .card a {
   display: inline-block;
   color: #2e5c3e;
-  background: antiquewhite;
+  background: #f0b340;
   padding: 8px 12px;
   text-decoration: none;
   border-radius: 4px;
