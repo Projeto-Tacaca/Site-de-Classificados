@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #2e5c3e;
+  background-color: #fdf1c1;
 }
 
 .header {
@@ -15,7 +15,7 @@ body {
   top: 5px;
   left: 50%;
   transform: translateX(-50%);
-  color: #2e5c3e;
+  color: #fdf1c1;
   font-size: 40px;
   font-weight: bold;
 }
