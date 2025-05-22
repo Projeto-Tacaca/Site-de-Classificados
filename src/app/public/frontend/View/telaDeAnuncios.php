@@ -23,13 +23,10 @@
 </form>
 </div>
 
-    
-
         <div class="card-layout">
                    <?php  include '../../../backEnd/Controller/listarAnunciosController.php';?>
 
                 </div>
-
 
         <!-- barra lateral -->
         <div class="navigation">
