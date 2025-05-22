@@ -13,13 +13,14 @@
   <!-- Cabeçalho -->
   <header class="header">
     <a href="../view/telaDeAnuncios.php" class="back" aria-label="Voltar para página anterior">&#8592;</a>
-    <h1 class="titulo">Minha conta</h1>
+    <h1 class="titulo">MINHA CONTA</h1>
   </header>
 
   <!-- Conteúdo principal -->
   <main class="container perfil-container">
-    <button id="editarPerfil" class="btn-editar" aria-label="Editar dados do perfil">Editar</button>
     <button id="salvarPerfil" class="btn-salvar hidden" aria-label="Salvar dados do perfil">Salvar</button>
+    <button id="editarPerfil" class="btn-editar" aria-label="Editar dados do perfil">Editar</button>
+    
     <div class="perfil-flex">
       <!-- Foto de perfil -->
       <div class="foto-perfil-container">
@@ -27,13 +28,14 @@
         <input type="file" id="inputFoto" accept="image/*" class="hidden" />
         <div id="botoesFoto" class="botoes-foto">
           <button id="btnFoto" class="botao-foto verde" aria-label="Alterar foto de perfil">
-            <span class="icon">&#128247;</span> Alterar
+             Alterar
           </button>
           <button id="btnRemoverFoto" class="botao-foto vermelho" aria-label="Remover foto de perfil">
-            <span class="icon">&#10060;</span> Remover
+             Remover
           </button>
         </div>
       </div>
+      <!-- função de arredondamento de foto de perfil -->
       <div class="perfil-info">
         <span id="nomeCentralizado" class="nome-centralizado">---</span>
         <!-- Informações da conta -->
@@ -45,10 +47,6 @@
           <div class="campo-linha">
             <label for="inputEmail" class="label">Email</label>
             <span class="campo editavel" id="inputEmail">---</span>
-          </div>
-          <div class="campo-linha">
-            <label for="inputCPF" class="label">CPF</label>
-            <span class="campo editavel" id="inputCPF">000.000.000-00</span>
           </div>
           <div class="campo-linha">
             <label for="inputTelefone" class="label">Telefone</label>
