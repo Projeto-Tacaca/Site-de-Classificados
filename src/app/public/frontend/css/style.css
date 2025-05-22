@@ -2,9 +2,12 @@
 body {
     min-height: 100vh;
     background-color: #fdf1c1;
-    font-family: Arial, sans-serif;
+     font-family: 'poppins', sans-serif;
     margin: 0;
     padding: 0;
+}
+h1 {
+    font-family: 'poppins', sans-serif;
 }
 
 /* Cabeçalho */
