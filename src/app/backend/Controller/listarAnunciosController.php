@@ -28,12 +28,9 @@ if ($result->num_rows > 0){
         <img src='" . BASE_URL . "/uploads/teste.png'>
         <h2>$titulo</h2>
         <p>Preço: R$ $preco</p>
-        <p>Data de Criação: $data</p>
-<<<<<<< HEAD
+        <p id = 'preco'> $data</p>
         <a href='../../../public/frontend/view/anuncio.php'>Ver Detalhes</a>
-=======
-        <a href='../../../public/frontend/View/anuncio.php'>Ver Detalhes</a>
->>>>>>> 174791b2f3f770fddb8dd9d3094e132386639e53
+
       </div>";
 
 

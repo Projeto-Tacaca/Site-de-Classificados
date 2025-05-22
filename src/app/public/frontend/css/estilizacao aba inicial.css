@@ -245,7 +245,6 @@ form {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
   background-color: x;
   width: 250px;
   max-height: 400px;
@@ -255,6 +254,11 @@ form {
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   padding: 16px;
   text-align: center;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
 }
 
 .card img {
@@ -266,14 +270,21 @@ form {
 }
 .card p{
     height: 60px;
-    margin-bottom: 10px;
+    background:none;
+    margin-top: 0;
     font-size: 1.2rem;
     color: #2e5c3e;
 }
+.card #preco {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #2e5c3e;
+    font-size: 1rem;
+}
+
 .card h2 {
   font-size: 1.3rem;
-  margin: 10px 0;
-  color: #fdf1c1;
+  color: #2e5c3e;
 }
 .card a {
   display: inline-block;
@@ -282,4 +293,8 @@ form {
   padding: 8px 12px;
   text-decoration: none;
   border-radius: 4px;
+}
+.card a:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
 }
