@@ -18,7 +18,7 @@
 
   <!-- Conteúdo principal -->
   <main class="container perfil-container">
-    <button id="salvarPerfil" class="btn-salvar hidden" aria-label="Salvar dados do perfil">Salvar</button>
+    <button id="editarPerfil" class="btn-salvar hidden" aria-label="Salvar dados do perfil" onclick="editarPerfil()">Editar</button>
     <button id="editarPerfil" class="btn-editar" aria-label="Editar dados do perfil">Editar</button>
     
     <div class="perfil-flex">

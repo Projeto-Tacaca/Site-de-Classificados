@@ -135,3 +135,12 @@
           botoesFoto.classList.remove('hidden');
         });
       });
+
+      function editarPerfil(){
+        const btnEditar = document.getElementById('editarPerfil');
+      btnEditar.click( 
+        
+      );
+
+       
+      }
