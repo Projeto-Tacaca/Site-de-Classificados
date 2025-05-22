@@ -18,9 +18,8 @@
 
   <!-- Conteúdo principal -->
   <main class="container perfil-container">
-    <button id="editarPerfil" class="btn-salvar hidden" aria-label="Salvar dados do perfil" onclick="editarPerfil()">Editar</button>
-    <button id="editarPerfil" class="btn-editar" aria-label="Editar dados do perfil">Editar</button>
-    
+    <button id="editarPerfil" class="btn-editar" aria-label="Editar dados do perfil" onclick="toggleEditarPerfilTexto(this)">Editar</button>
+   
     <div class="perfil-flex">
       <!-- Foto de perfil -->
       <div class="foto-perfil-container">
