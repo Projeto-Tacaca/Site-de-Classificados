@@ -18,7 +18,6 @@
 
   <!-- Conteúdo principal -->
   <main class="container perfil-container">
-    <div id="feedbackMsg" class="feedback-msg hidden"></div>
     <button id="editarPerfil" class="btn-editar" aria-label="Editar dados do perfil">Editar</button>
     <button id="salvarPerfil" class="btn-salvar hidden" aria-label="Salvar dados do perfil">Salvar</button>
     <div class="perfil-flex">
