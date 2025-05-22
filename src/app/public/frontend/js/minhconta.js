@@ -136,11 +136,12 @@
         });
       });
 
-      function editarPerfil(){
+      function editarPerfil() {
         const btnEditar = document.getElementById('editarPerfil');
-      btnEditar.click( 
-        
-      );
-
-       
+        if (btnEditar.innerText === 'Editar Perfil') {
+          btnEditar.innerText = 'Editando...';
+        } else {
+          btnEditar.innerText = 'Editar Perfil';
+        }
+        btnEditar.click();
       }
