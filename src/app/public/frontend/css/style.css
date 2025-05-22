@@ -109,20 +109,12 @@ body {
   border-color: #16a34a !important;
 }
 
-@media (max-width: 500px) {
-  .w-40 {
-    width: 120px !important;
-    height: 120px !important;
-  }
-  .border-8 {
-    border-width: 4px !important;
-  }
-}
+
 
 /* Estilo adicional estruturado */
 .foto-perfil-container {
-  width: 160px;
-  height: 160px;
+  width: 400px;
+  height: 400px;
   border-radius: 9999px;
   border: 8px solid #facc15;
   position: relative;
