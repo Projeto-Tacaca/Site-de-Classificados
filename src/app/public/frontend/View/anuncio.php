@@ -35,10 +35,9 @@
         <h3>R$00,00</h3>
         <p class="seller"><strong>Vendedor:</strong> seu nome</p>
         <p class="address">endereço</p>
-        <a class="btn" href="#">Falar com vendedor</a>
+        <button class="btn" >Falar com vendedor</button>
       </div>
     </div>
-  </>
 
 </body>
 </html>
