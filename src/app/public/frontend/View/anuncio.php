@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="../css/anuncio.css">
   </div>
 
-  <div class="container">
+  
     <div class="card">
       <div class="image-box">
         <img src="https://via.placeholder.com/250x200?text=foto" alt="foto do serviço">
@@ -38,7 +38,7 @@
         <a class="btn" href="#">Falar com vendedor</a>
       </div>
     </div>
-  </div>
+  </>
 
 </body>
 </html>

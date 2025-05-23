@@ -21,25 +21,25 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: flex-start;
-  padding: 30px;
+  max-height:50px ;
+  background-color: transparent;
 }
 
 .card {
   display: flex;
   background-color: #fdf1c1;
   border-radius: 10px;
-  max-width: 100%;
-  width: 100%;
+  margin: 15%;
   padding: 30px;
   gap: 80px;
   align-items: flex-start;
   flex-wrap: nowrap;
+  box-shadow: rgb(73, 73, 73) 0px 0px 10px;
 }
 
 .image-box {
   background-color: antiquewhite;
+  display: flex;
   border-radius: 20px;
   padding: 25px;
   position: relative;
@@ -53,6 +53,7 @@ body {
 }
 
 .image-box img {
+  display: flex;
   width: 100%;
   max-width: 400px;
   height: auto;
@@ -66,7 +67,7 @@ body {
   color: transparent;
   font-size: 26px;
   -webkit-text-stroke: 2px #2f5a31;
-  text-stroke: 2px #2f5a31;
+  stroke-width: 2px #2f5a31;
 }
 
 .content {
