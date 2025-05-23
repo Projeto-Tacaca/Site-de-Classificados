@@ -11,11 +11,11 @@
   <div class="header">
     <header class="bg-green-800 text-white p-4 flex items-center">
 
-    <a href="../view/telaDeAnuncios.php" class="text-2xl mr-4" aria-label="Voltar para página anterior">&#8592;</a>
+    <a href="../view/telaDeAnuncios.php" class="arrow">&#8592;</a>
   </header>
 
   
-    <span class="arrow">&#8592;</span>
+    
   <span class = "header-text"> VER-O-ANÚNCIO </span>
   <link rel="stylesheet" href="../css/anuncio.css">
   </div>
