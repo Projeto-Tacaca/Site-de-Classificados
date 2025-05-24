@@ -9,17 +9,10 @@
 </head>
 <body>
 
-  <div class="header">
-    <header class="bg-green-800 text-white p-4 flex items-center">
-
+  <header>
+      <span class = "header-text"> VER-O-ANÚNCIO </span>
     <a href="../view/telaDeAnuncios.php" class="arrow">&#8592;</a>
   </header>
-
-  
-    
-  <span class = "header-text"> VER-O-ANÚNCIO </span>
-  <link rel="stylesheet" href="../css/anuncio.css">
-  </div>
 
   
     <div class="card">

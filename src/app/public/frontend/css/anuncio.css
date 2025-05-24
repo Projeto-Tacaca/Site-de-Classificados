@@ -4,20 +4,24 @@ body {
   background-color: #fdf1c1;
 }
 
-.header {
+header {
   background-color: #2e5c3e;
   padding: 20px;
-  position: relative;
+  justify-items: center;
 }
 
 .header-text {
   position: absolute;
-  top: 5px;
   left: 50%;
   transform: translateX(-50%);
   color: #fdf1c1;
   font-size: 40px;
   font-weight: bold;
+}
+.arrow {
+  color: #fdf1c1;
+  text-decoration: none;
+  font-size: 40px;
 }
 
 
@@ -25,7 +29,7 @@ body {
   display: flex;
   background-color: antiquewhite;
   border-radius: 10px;
-  margin: 15%;
+  margin: 5% 10% 5% 10%;
   padding: 30px;
   gap: 80px;
   align-items: flex-start;
@@ -39,8 +43,7 @@ body {
   border: #f0b340 8px solid;
   border-radius: 20px;
   padding: 25px;
-  flex: 0 0 400px;
-  width: 40%;
+  width: 60%;
   height: 50%;
   left: -20px;
   margin: 5%;
@@ -165,6 +168,7 @@ size: 1.5rem;
   color: #fdf1c1;
 }
 .data{
-  margin-left: 150%;
+  
+  margin-left: 90%;
   font-size: 1.5rem;
 }
