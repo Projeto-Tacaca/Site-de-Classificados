@@ -1,12 +1,4 @@
-<?php 
-session_start();
 
-$id = $_SESSION['id_user']; 
-$id_anuncio = $_GET['id_anuncios']; 
-echo $id;
-echo "<br>";
-echo $id_anuncio;
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -37,12 +29,8 @@ echo $id_anuncio;
       </div>
 
       <div class="content">
-        <h2>Serviços domésticos</h2>
-        <p>
-          descrição do produto
-        </p>
-        <h3>R$00,00</h3>
-        <p class="seller"><strong>Vendedor:</strong> seu nome</p>
+        <?php  include '../../../backEnd/Controller/carregarAnuncio.php';
+?>
         <p class="address">endereço</p>
         <button class="btn" >Falar com vendedor</button>
       </div>
