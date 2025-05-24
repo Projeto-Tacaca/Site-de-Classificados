@@ -37,7 +37,7 @@
                         <span class="title">início</span>
                     </a>
                 <li class="list">
-                    <a href="#">
+                    <a href="publicaranuncio.php">
                         <span class="icon"><ion-icon name="albums-outline"></ion-icon></span>
                         <span class="title">navegar</span>   
                     </a>

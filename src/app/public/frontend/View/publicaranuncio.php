@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="../css/piblicaranuncio.css">
 </head>
 <body>
-    <div class="header">
+
+ <?php  include '../../../backEnd/Controller/publicarAnuncioController.php';?>  
+ 
+ <div class="header">
         <h2>Seu anúncio</h2>
     </div>
     <div class="container">
@@ -17,23 +20,21 @@
             <div></div>
             <div></div>
         </div>
-        <div class="form-group">
-            <label>Título do anúncio</label>
-            <input type="text" placeholder="Título" />
-        </div>
-        <div class="form-group">
-            <label>Descrição</label>
-            <textarea placeholder="Descrição"></textarea>
-        </div>
-        <div class="form-group">
-            <label>Valor R$</label>
-            <input type="text" placeholder="Valor" />
-        </div>
-        <div class="form-group">
-            <label>Endereço</label>
-            <input type="text" placeholder="Endereço" />
-        </div>
-        <button>Concluir</button>
+        <form method="post" enctype="multipart/form-data" action="../../../backend/Controller/publicarAnuncioController.php">
+            <div class="form-group">
+                <label>Título do anúncio</label>
+                <input type="text" name="titulo" placeholder="Título" />
+            </div>
+            <div class="form-group">
+                <label>Descrição</label>
+                <textarea name="descricao" placeholder="Descrição"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Valor R$</label>
+                <input name="preco" type="text" placeholder="Valor" />
+            </div>
+            <button type="submit">Concluir</button>
+        </form>
     </div>
 </body>
 </html>
