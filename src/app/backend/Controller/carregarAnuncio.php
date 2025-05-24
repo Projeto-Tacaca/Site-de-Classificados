@@ -21,20 +21,7 @@ if ($result->num_rows > 0) {
 
         //BUSCAR NOME USER
         //REFATORAR PARA FUNÇÃO
-        $querySQL2 = "SELECT nome FROM usuarios WHERE id_user = ?";
-        $preparedStatment2 = $connection->prepare($querySQL2);
-        if (!$preparedStatment2) {
-            die("Erro ao preparar: " . $connection->error);
-        }
-        $preparedStatment2->bind_param("i", $id_usuario);
-        $preparedStatment2->execute();
-        $result2 = $preparedStatment2->get_result();
-        if ($result2->num_rows > 0) {
-            $rows2 = $result2->fetch_assoc();
-            $nome_usuario = $rows2['nome'];
-        } else {
-            $nome_usuario = "Usuário desconhecido";
-        }
+        $nome_usuario = buscarNomeUser($connection,$id_usuario);
 
         echo "
         <h2>$titulo</h2>
@@ -50,5 +37,26 @@ if ($result->num_rows > 0) {
 }
 
 
+//Função para buscar o nome do usuário
+function buscarNomeUser($connection,$id_usuario){
+    $querySQL2 = "SELECT nome FROM usuarios WHERE id_user = ?";
+    $preparedStatment2 = $connection->prepare($querySQL2);
 
+    if (!$preparedStatment2) {
+        die("Erro ao preparar: " . $connection->error);
+    }
+    $preparedStatment2 ->bind_param("i", $id_usuario);
+    $preparedStatment2->execute();
+    $result2 = $preparedStatment2->get_result();
+    if($result2->num_rows > 0){
+        $rows2 = $result2->fetch_assoc();
+        $nome_usuario = $rows2['nome'];
+        return $nome_usuario;
+
+    }else{
+        $nome_usuario = "Usuário desconhecido";
+
+    }
+
+}
 ?>
