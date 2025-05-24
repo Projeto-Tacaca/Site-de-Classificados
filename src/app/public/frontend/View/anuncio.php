@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anúncio</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/anuncio.css">
 </head>
 <body>
 
@@ -23,15 +23,10 @@
 
   
     <div class="card">
-      <div class="image-box">
-        <img src="https://via.placeholder.com/250x200?text=foto" alt="foto do serviço">
-        <span class="star">&#9733;</span>
-      </div>
-
+      
       <div class="content">
         <?php  include '../../../backEnd/Controller/carregarAnuncio.php';
 ?>
-        <p class="address">endereço</p>
         <button class="btn" >Falar com vendedor</button>
       </div>
     </div>

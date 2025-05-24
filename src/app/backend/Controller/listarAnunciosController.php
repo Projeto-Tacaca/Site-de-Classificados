@@ -25,7 +25,7 @@ if ($result->num_rows > 0){
         $data = date('d/m/Y', strtotime($data));
 
       echo "<div class='card'>
-        <img src='" . BASE_URL . "/uploads/teste.png'>
+        <img src='" . BASE_URL . "/$caminho_img' alt='Imagem do Anúncio'>
         <h2>$titulo</h2>
         <p>Preço: R$ $preco</p>
         <p id = 'preco'> $data</p>

@@ -1,5 +1,7 @@
 <?php 
 session_start();
+define('BASE_URL', '/Site-de-Classificados/');
+
 require '../../../../../database/config.php';
 $id = $_SESSION['id_user'];
 $id_anuncio = $_GET['id_anuncios'];
@@ -15,19 +17,27 @@ if ($result->num_rows > 0) {
     while ($rows = $result->fetch_assoc()) {
         $id_anuncio = $rows['id_anuncios'];
         $id_usuario = $rows['id_user_fk'];
+        $image = $rows['caminho_img'];
         $titulo = $rows['titulo_anuncio'];
         $descricao = $rows['descricao'];
         $preco = $rows['preco'];
+        $dataFormatada = date('d/m/Y', strtotime($rows['data_criacao']));        
 
         //BUSCAR NOME USER
         //REFATORAR PARA FUNÇÃO
         $nome_usuario = buscarNomeUser($connection,$id_usuario);
 
-        echo "
-        <h2>$titulo</h2>
+        echo "<div class='image-box'>
+        <img src='" . BASE_URL . "/$image' alt='Imagem do Anúncio'>       
+        <span class='star'>&#9733;</span>
+      </div>
+";
+        echo "  
+         <h2>$titulo</h2>
         <h3>Preço: R$ $preco</h3>
         <p id = 'preco'> $descricao</p>
         <p class='seller'><strong>Vendedor:</strong> $nome_usuario</p>
+        <p class = 'data'>$dataFormatada</p>
 
         ";
         
