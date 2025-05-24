@@ -23,38 +23,83 @@ body {
 
 .card {
   display: flex;
-  background-color: #fdf1c1;
+  background-color: antiquewhite;
   border-radius: 10px;
   margin: 15%;
   padding: 30px;
   gap: 80px;
   align-items: flex-start;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   box-shadow: rgb(73, 73, 73) 0px 0px 10px;
 }
 
 .image-box {
   background-color: antiquewhite;
   display: flex;
+  border: #f0b340 8px solid;
   border-radius: 20px;
   padding: 25px;
-  position: relative;
   flex: 0 0 400px;
-  text-align: center;
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  position: relative;
+  width: 40%;
+  height: 50%;
   left: -20px;
+  margin: 5%;
+  box-sizing: border-box;
 }
 
 .image-box img {
-  display: relative;
+  display: flex;
   width: 100%;
-  max-width: 400px;
-  
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+  margin: 10px 0;
+  border-radius: 15px;
 }
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .card {
+    flex-direction: column;
+    gap: 30px;
+    margin: 5%;
+    padding: 15px;
+  }
+  .image-box {
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    flex: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-text {
+    font-size: 7vw;
+  }
+  .card {
+    margin: 2%;
+    padding: 5px;
+    gap: 10px;
+  }
+  .image-box {
+    width: 100%;
+    height: 180px;
+    padding: 5px;
+    border-width: 4px;
+  }
+  .content h2 {
+    font-size: 5vw;
+  }
+  .content p, .seller, .address {
+    font-size: 3.5vw;
+  }
+  .btn {
+    font-size: 4vw;
+    padding: 10px 16px;
+  }
+}
+/* Estilo adicional estruturado */
 
 .star {
   position: relative;
@@ -69,27 +114,28 @@ body {
 .content {
   position: relative;
   color: #2e5c3e;
-  padding: 25px;
+  padding: 2%;
   line-height: 1.8;
   margin: 2%;
+  min-width:20% ;
 }
 
 .content h2 {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  font-size: 34px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 2.5vw;
 }
 
 .content p {
-  margin-bottom: 15px;
+  margin-bottom: 2%;
   line-height: 2;
-  font-size: 22px;
+  font-size: 1.5vw;
 }
 
 .content h3 {
-  margin-top: 20px;
-  margin-bottom: 15px;
-  font-size: 28px;
+  margin-top: 2.5%;
+  margin-bottom: 2%;
+  font-size: 2vw;
 }
 
 .seller, .address {
@@ -100,8 +146,8 @@ body {
 .btn {
   display: inline-block;
   padding: 18px 28px;
-  background-color: #2e5c3e;
-  color: #fdf1c1;
+  background: #f0b340;
+  color: #2e5c3e;
   text-decoration: none;
   border-radius: 10px;
   margin-top: 20px;
@@ -110,9 +156,10 @@ body {
 }
 
 .btn:hover {
-  background-color: #349154;
-  color: #fff9e0;
+  background: #ffd182;
+  color: #0f722d;
 }
+
 .arrow {
 size: 1.5rem;
   color: #fdf1c1;
