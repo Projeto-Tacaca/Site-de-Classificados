@@ -1,5 +1,8 @@
 <?php
-require 'c:\xampp\htdocs\Site-de-Classificados\database\config.php';
+define('BASE_URL', '/Site-de-Classificados/');
+echo "<link rel='stylesheet' href='" . BASE_URL . "css/estilizacao aba inicial.css'>";
+
+require '../../../../../database/config.php';
 
 $querySQL = "SELECT * FROM anuncios";
 $preparedStatment = $connection->prepare($querySQL);
@@ -17,15 +20,26 @@ if ($result->num_rows > 0){
         $titulo = $rows['titulo_anuncio'];
         $descricao = $rows['descricao'];
         $preco = $rows['preco'];
+        $caminho_img = $rows['caminho_img'];
         $data = $rows['data_criacao'];
+        $data = date('d/m/Y', strtotime($data));
 
-    
+      echo "<div class='card'>
+        <img src='" . BASE_URL . "/uploads/teste.png'>
+        <h2>$titulo</h2>
+        <p>Preço: R$ $preco</p>
+        <p id = 'preco'> $data</p>
+        <a href='../../../public/frontend/view/anuncio.php'>Ver Detalhes</a>
+
+      </div>";
+
 
         
 
     }
 
 }
+
 
 
 

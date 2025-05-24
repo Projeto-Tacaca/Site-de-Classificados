@@ -9,12 +9,18 @@
 <body>
 
   <div class="header">
-    <span class="arrow">&#8592;</span>
+    <header class="bg-green-800 text-white p-4 flex items-center">
+
+    <a href="../view/telaDeAnuncios.php" class="arrow">&#8592;</a>
+  </header>
+
+  
+    
   <span class = "header-text"> VER-O-ANÚNCIO </span>
   <link rel="stylesheet" href="../css/anuncio.css">
   </div>
 
-  <div class="container">
+  
     <div class="card">
       <div class="image-box">
         <img src="https://via.placeholder.com/250x200?text=foto" alt="foto do serviço">
@@ -29,10 +35,9 @@
         <h3>R$00,00</h3>
         <p class="seller"><strong>Vendedor:</strong> seu nome</p>
         <p class="address">endereço</p>
-        <a class="btn" href="#">Falar com vendedor</a>
+        <button class="btn" >Falar com vendedor</button>
       </div>
     </div>
-  </div>
 
 </body>
 </html>

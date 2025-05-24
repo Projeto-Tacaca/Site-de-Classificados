@@ -1,74 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Conta</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/style.css">
-    <style>
-      .input-error { border-color: #dc2626 !important; }
-      .input-success { border-color: #16a34a !important; }
-      @media (max-width: 500px) {
-        .w-40 { width: 120px !important; height: 120px !important; }
-        .border-8 { border-width: 4px !important; }
-      }
-    </style>
-</head>
-<body class="bg-yellow-100 font-sans">
-    <!-- Cabeçalho -->
-    <header class="bg-green-800 text-white p-4 flex items-center">
-      <a href="#" class="text-2xl mr-4" aria-label="Voltar para página anterior">&#8592;</a>
-      <h1 class="text-2xl font-semibold">Minha conta</h1>
-    </header>
-    <!-- Conteúdo principal -->
-    <main class="p-6 max-w-3xl mx-auto bg-white mt-6 rounded-xl shadow-md relative">
-      <!-- Feedback -->
-      <div id="feedbackMsg" class="hidden absolute top-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded shadow z-50"></div>
-      <!-- Botão Editar -->
-      <button id="editarPerfil" class="absolute right-4 top-4 bg-green-800 text-white px-4 py-2 rounded-lg shadow hover:bg-green-900 transition z-10" aria-label="Editar dados do perfil">Editar</button>
-      <button id="salvarPerfil" class="absolute right-4 top-4 bg-yellow-400 text-green-900 px-4 py-2 rounded-lg shadow hover:bg-yellow-500 transition z-10 hidden font-bold border border-green-800" aria-label="Salvar dados do perfil">Salvar</button>
-      <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-        <!-- Foto de perfil -->
-        <div class="flex flex-col items-center">
-          <div class="w-40 h-40 rounded-full border-8 border-yellow-400 flex items-center justify-center bg-white text-gray-600 text-lg font-semibold relative overflow-hidden group">
-            <img id="fotoPerfil" src="https://via.placeholder.com/150" alt="Foto do usuário" class="absolute inset-0 w-full h-full object-cover opacity-70 z-0" />
-            <input type="file" id="inputFoto" accept="image/*" class="hidden" />
-            <div id="botoesFoto" class="absolute inset-0 flex flex-col items-center justify-end pb-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-              <button id="btnFoto" class="bg-green-800 text-white text-xs px-3 py-1 rounded-full shadow hover:bg-green-900 transition opacity-90 mb-2 flex items-center gap-1" aria-label="Alterar foto de perfil">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536M9 13l6-6m2 2l-6 6m2 2l-6-6" /></svg>
-                Alterar
-              </button>
-              <button id="btnRemoverFoto" class="bg-red-600 text-white text-xs px-3 py-1 rounded-full shadow hover:bg-red-700 transition opacity-90 flex items-center gap-1" aria-label="Remover foto de perfil">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                Remover
-              </button>
-            </div>
-          </div>
-          <span id="nomeCentralizado" class="block mt-3 text-center font-semibold text-gray-800 text-base" style="font-size:12px; max-width:160px; word-break:break-word;">---</span>
-        </div>
-        <!-- Informações da conta -->
-        <form id="formPerfil" class="text-gray-800 text-lg space-y-4 w-full">
-          <div class="flex items-center">
-            <label for="inputNome" class="block text-sm text-gray-500 font-semibold mr-2">Nome</label>
-            <span class="font-medium text-xl bg-white border border-black rounded-full px-4 py-1 shadow-sm editavel" style="font-size:12px;" id="inputNome">---</span>
-          </div>
-          <div class="flex items-center">
-            <label for="inputEmail" class="block text-sm text-gray-500 font-semibold mr-2">Email</label>
-            <span class="text-green-800 font-medium text-lg bg-white border border-black rounded-full px-4 py-1 shadow-sm editavel" style="font-size:12px;" id="inputEmail">---</span>
-          </div>
-          <div class="flex items-center">
-            <label for="inputCPF" class="block text-sm text-gray-500 font-semibold mr-2">CPF</label>
-            <span class="text-lg bg-white border border-black rounded-full px-4 py-1 shadow-sm editavel" style="font-size:12px;" id="inputCPF">000.000.000-00</span>
-          </div>
-          <div class="flex items-center">
-            <label for="inputTelefone" class="block text-sm text-gray-500 font-semibold mr-2">Telefone</label>
-            <span class="text-lg bg-white border border-black rounded-full px-4 py-1 shadow-sm editavel" style="font-size:12px;" id="inputTelefone">(00) 00000-0000</span>
-          </div>
-        </form>
-      </div>
-    </main>
-    <script>
       document.addEventListener('DOMContentLoaded', function() {
         const btnEditar = document.getElementById('editarPerfil');
         const btnSalvar = document.getElementById('salvarPerfil');
@@ -206,6 +135,11 @@
           botoesFoto.classList.remove('hidden');
         });
       });
-    </script>
-</body>
-</html>
+
+     function toggleEditarPerfilTexto(btn) {
+      if (btn.textContent.trim() === "Editar") {
+        btn.textContent = "Salvar";
+      } else {
+        btn.textContent = "Editar";
+      }
+      }

@@ -1,8 +1,3 @@
-<?php 
-session_start();
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,7 +23,7 @@ session_start();
 </form>
 </div>
 
-    <div class="card-itens">
+        <div class="card-layout">
                    <?php  include '../../../backEnd/Controller/listarAnunciosController.php';?>
 
                 </div>
@@ -62,7 +57,7 @@ session_start();
                 </li>
                 
                 <li class="list">
-                    <a href="#">
+                    <a href="teladeperfil.php">
                         <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                         <span class="title">minha conta</span>   
                     </a>
@@ -92,11 +87,9 @@ session_start();
                 }
                 list.forEach((item) =>
                  item.addEventListener('click', activeLink));
-            </script>
-
-
-            
+            </script>  
         </div>
+
 
           
 </body>

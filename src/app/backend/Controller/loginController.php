@@ -34,13 +34,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         }
         else{
-            echo "<script>alert('Senha incorreta.');</script>";
+            echo "<script>alert('E-mail ou senha incorretos.');</script>";
             echo "<script>window.location.href = '../../public/frontend/View/login.php';</script>";
             exit();
         } 
     }
     else{
-        echo "<script>alert('E-mail não cadastrado.');</script>";
+        echo "<script>alert('E-mail ou senha incorretos.');</script>";
         echo "<script>window.location.href = '../../public/frontend/View/login.php';</script>";
         exit();
     }
