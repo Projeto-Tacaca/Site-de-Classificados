@@ -1,9 +1,10 @@
 <?php 
 session_start();
 
-$id = $_SESSION['id_user']; // Simulando um ID de usuário para fins de teste
-$id_anuncio = $_GET['id_anuncios']; // Simulando um ID de anúncio para fins de teste
+$id = $_SESSION['id_user']; 
+$id_anuncio = $_GET['id_anuncios']; 
 echo $id;
+echo "<br>";
 echo $id_anuncio;
 ?>
 <!DOCTYPE html>

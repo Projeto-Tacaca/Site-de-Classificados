@@ -29,8 +29,7 @@ if ($result->num_rows > 0){
         <h2>$titulo</h2>
         <p>Preço: R$ $preco</p>
         <p id = 'preco'> $data</p>
-        <a href='../../../public/frontend/view/anuncio.php'>Ver Detalhes</a>
-
+        <a href='../../../public/frontend/view/anuncio.php?id_anuncios=$id_anuncio'>Ver Detalhes</a>
       </div>";
 
 
