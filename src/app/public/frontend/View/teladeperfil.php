@@ -23,7 +23,7 @@
     <div class="perfil-flex">
       <!-- Foto de perfil -->
       <div class="foto-perfil-container">
-        <img id="fotoPerfil" src="https://via.placeholder.com/150" alt="Foto do usuário" class="foto-perfil-img" />
+        <img id="fotoPerfil" src="" alt="Foto do usuário" class="foto-perfil-img" />
         <input type="file" id="inputFoto" accept="image/*" class="hidden" />
         <div id="botoesFoto" class="botoes-foto">
           <button id="btnFoto" class="botao-foto verde" aria-label="Alterar foto de perfil">
