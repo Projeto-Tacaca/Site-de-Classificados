@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
         $nome_usuario = buscarNomeUser($connection,$id_usuario);
 
         echo "<div class='image-box'>
-        <img src='" . BASE_URL . "/$image' alt='Imagem do Anúncio'>       
+        <img src='$image' alt='Imagem do Anúncio'>       
         <span class='star'>&#9733;</span>
       </div>
 ";

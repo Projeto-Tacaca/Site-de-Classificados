@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if ($stmt->execute()) {
                 echo "<script>alert('Anúncio publicado com sucesso!');</script>";
-        echo "<script>window.location.href = '../../public/frontend/View/login.php';</script>";
+            echo "<script>window.location.href = '../../public/frontend/View/telaDeAnuncios.php';</script>";
             } else {
                 echo "Erro ao salvar no banco: " . $stmt->error;
             }
