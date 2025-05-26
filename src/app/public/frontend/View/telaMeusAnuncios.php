@@ -16,8 +16,10 @@
       Nenhum anúncio encontrado. Publique seu primeiro anúncio!
     </div>
     <div id="anuncios-lista">
-      <!-- Os anúncios serão carregados dinamicamente aqui via JS/PHP -->
-    </div>
+<?php 
+include __DIR__ . '/../../../backEnd/Controller/meusAnunciosController.php';
+
+?>  </div>
   </main>
 </body>
 </html>
