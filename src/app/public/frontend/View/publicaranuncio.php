@@ -7,20 +7,16 @@
     <link rel="stylesheet" href="../css/piblicaranuncio.css">
 </head>
 <body>
-
- <?php  include '../../../backEnd/Controller/publicarAnuncioController.php';?>  
  
  <div class="header">
         <h2>Seu anúncio</h2>
     </div>
-    <div class="container">
-        <div class="photo">foto</div>
-        <div class="indicator">
-            <div class="active"></div>
-            <div></div>
-            <div></div>
-        </div>
+   
         <form method="post" enctype="multipart/form-data" action="../../../backend/Controller/publicarAnuncioController.php">
+             <div class="container">
+        <input class="photo" type="file" name="foto" id="foto" accept="image/*" />
+        
+        </div>
             <div class="form-group">
                 <label>Título do anúncio</label>
                 <input type="text" name="titulo" placeholder="Título" />
@@ -31,9 +27,10 @@
             </div>
             <div class="form-group">
                 <label>Valor R$</label>
-                <input name="preco" type="text" placeholder="Valor" />
+                <input type="number" accept="0.01" name="preco" placeholder="Valor" />
             </div>
             <button type="submit">Concluir</button>
+
         </form>
     </div>
 </body>

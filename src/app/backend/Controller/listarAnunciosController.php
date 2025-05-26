@@ -24,7 +24,7 @@ if ($result->num_rows > 0){
         $data = date('d/m/Y', strtotime($data));
 
       echo "<div class='card'>
-        <img src='" . BASE_URL . "/$caminho_img' alt='Imagem do Anúncio'>
+        <img src='$caminho_img' alt='Imagem do Anúncio'>
         <h2>$titulo</h2>
         <p>Preço: R$ $preco</p>
         <p id = 'preco'> $data</p>
@@ -36,6 +36,8 @@ if ($result->num_rows > 0){
 
     }
 
+}else {
+    echo "<div class='no-anuncios'>Nenhum anúncio encontrado.</div>";
 }
 
 
