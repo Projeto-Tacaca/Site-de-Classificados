@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #fdf1c1;
+}
+
+.header {
+    background-color: #2e5c3e;
+    color: #fdf1c1;
+    padding: 24px 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh;
+    padding: 40px 0;
+}
+
+.anuncio-form {
+    display: flex;
+    background: #fffbe9;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    gap: 48px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.photo-area {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 220px;
+    min-width: 180px;
+}
+
+.photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 16px;
+    background: #fdf1c1;
+    border: 2px dashed #f0b340;
+    padding: 24px;
+    object-fit: cover;
+    font-size: 1rem;
+}
+
+.fields-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    color: #2e5c3e;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    padding: 10px 12px;
+    border: 1px solid #f0b340;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    color: #2e5c3e;
+    resize: none;
+}
+
+textarea {
+    min-height: 70px;
+    max-height: 180px;
+}
+
+button[type="submit"] {
+    margin-top: 12px;
+    background: #2e5c3e;
+    color: #fdf1c1;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.back{
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 2.5rem;
+    position: absolute;
+    left: 20px;
+
+}
+
+button[type="submit"]:hover {
+    background: #256b3e;
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+    .anuncio-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 20px 8px;
+    }
+    .photo-area {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+    .fields-area {
+        width: 100%;
+    }
+}

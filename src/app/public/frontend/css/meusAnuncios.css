@@ -1,0 +1,135 @@
+/* Estilo geral */
+body {
+    min-height: 100vh;
+    background-color: #fdf1c1;
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #2e5c3e;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #fdf1c1;
+    padding: 20px;
+    justify-content: center;
+}
+.header h1, .titulo {
+    font-family: 'poppins', sans-serif;
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 2.2rem;
+    margin: 0;
+}
+.back {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: #fdf1c1;
+    font-size: 2.2rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 2;
+}
+.back:hover {
+    color: #f0b340;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 80vh;
+    width: 90vw;
+    max-width: 700px;
+    margin: 32px auto 0 auto;
+    padding: 40px 20px;
+    background: antiquewhite;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+/* Mensagem padrão */
+#mensagem-padrao {
+    color: #2e5c3e;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Lista de anúncios */
+#anuncios-lista {
+    width: 100%;
+}
+
+/* Card de anúncio (ajuste se necessário) */
+.card {
+    background-color: #2e5c3e;
+    color: #fdf1c1;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card :hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+}
+.card img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+.card h2 {
+    font-size: 1.3rem;
+    margin: 0 0 8px 0;
+    color: #fdf1c1;
+}
+.card p {
+    margin: 0 0 8px 0;
+    color: #fdf1c1;
+}
+.card a {
+    display: inline-block;
+    color: #2e5c3e;
+    background: #f0b340;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 8px;
+    font-weight: 600;
+}
+.card a:hover {
+    background: #ffd182;
+    color: #0f722d;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .container {
+        padding: 16px 4px;
+        max-width: 98vw;
+    }
+    .card img {
+        max-width: 100%;
+    }
+    .header h1, .titulo {
+        font-size: 1.3rem;
+    }
+}
