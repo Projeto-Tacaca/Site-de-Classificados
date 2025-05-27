@@ -1,4 +1,12 @@
+<?php 
+session_start();
+if(!isset($_SESSION['email']) || !isset($_SESSION['id_user'])) {
+header("Location: /Site-de-Classificados/src/app/public/frontend/View/login.php");
+    exit();
 
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

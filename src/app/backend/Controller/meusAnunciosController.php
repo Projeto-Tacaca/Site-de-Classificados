@@ -1,5 +1,13 @@
 <?php 
 session_start();
+if(!isset($_SESSION['email']) || !isset($_SESSION['id_user'])) {
+    session_destroy();
+header("Location: /Site-de-Classificados/src/app/public/frontend/View/login.php");
+exit();
+
+}
+
+
 require __DIR__. '/../../../../database/config.php';
 
 $id = $_SESSION['id_user'];

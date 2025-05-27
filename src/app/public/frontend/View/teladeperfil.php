@@ -1,5 +1,11 @@
 <?php 
-  session_start();
+session_start();
+if(!isset($_SESSION['email']) || !isset($_SESSION['id_user'])) {
+    header("Location: ../view/telaDeAnuncios.php");
+    exit();
+
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

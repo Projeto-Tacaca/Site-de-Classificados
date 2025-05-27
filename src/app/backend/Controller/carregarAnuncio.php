@@ -1,5 +1,12 @@
 <?php 
 session_start();
+if(!isset($_SESSION['email']) || !isset($_SESSION['id_user'])) {
+
+header("Location: /Site-de-Classificados/src/app/public/frontend/View/login.php");
+    exit();
+
+}
+
 define('BASE_URL', '/Site-de-Classificados/');
 
 require '../../../../../database/config.php';
