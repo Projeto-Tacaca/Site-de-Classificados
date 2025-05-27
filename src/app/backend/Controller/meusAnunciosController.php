@@ -20,7 +20,6 @@ if ($result->num_rows > 0) {
         echo '<h2>' . htmlspecialchars($row['titulo_anuncio']) . '</h2>';
         echo '<p>' . htmlspecialchars($row['descricao']) . '</p>';
         echo '<p>Preço: R$ ' . number_format($row['preco'], 2, ',', '.') . '</p>';
-        echo '<button class="btn-editar">Editar</button>';
         echo '<button class="btn-excluir">Excluir</button>';
         echo '</div>';
     }
