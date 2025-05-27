@@ -296,3 +296,20 @@ form {
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
 }
+.add {
+    position: fixed;
+    bottom: 5%;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 90%;
+    background-color: #f0b340;
+    color: #2e5c3e;
+    border-radius: 90%;
+    border: none;
+}
+.add a {
+    text-decoration: none;
+    color: #2e5c3e;
+    font-size: 5rem;
+}
