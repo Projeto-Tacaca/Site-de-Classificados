@@ -1,4 +1,12 @@
+<?php 
+session_start();
+if(!isset($_SESSION['email']) || !isset($_SESSION['id_user'])) {
+header("Location: /Site-de-Classificados/src/app/public/frontend/View/login.php");
+    exit();
 
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -69,7 +77,7 @@
                     </a>
                 </li>
                 <li class="list">
-                    <a href="#">
+                    <a href="../../../backEnd/Controller/logoutController.php">
                         <span class="icon"><ion-icon name="exit-outline"></ion-icon></span>
                         <span class="title">sair</span>   
                     </a>
