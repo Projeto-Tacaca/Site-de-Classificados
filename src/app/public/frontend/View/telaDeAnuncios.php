@@ -39,7 +39,7 @@
                 <li class="list">
                     <a href="publicaranuncio.php">
                         <span class="icon"><ion-icon name="albums-outline"></ion-icon></span>
-                        <span class="title">navegar</span>   
+                        <span class="title">publicar anúncios</span>   
                     </a>
                 </li>
                 </li>
