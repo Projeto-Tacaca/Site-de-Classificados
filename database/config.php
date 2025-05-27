@@ -3,7 +3,7 @@
 $hotname = "localhost";
 $username = "root";
 $port = "3306";
-$password = "root";
+$password = "Paocomqueijo/1";
 $database = "ver-o-anuncio";
 
 $connection = mysqli_connect($hotname, $username, $password, $database, $port);
