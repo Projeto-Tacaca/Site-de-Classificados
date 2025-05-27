@@ -116,6 +116,11 @@ button[type="submit"] {
     position: absolute;
     left: 20px;
 
+
+}
+
+.back:hover {
+    color: #f0b340;
 }
 
 button[type="submit"]:hover {

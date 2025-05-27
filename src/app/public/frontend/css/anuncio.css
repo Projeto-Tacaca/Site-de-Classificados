@@ -23,6 +23,9 @@ header {
   text-decoration: none;
   font-size: 40px;
 }
+.arrow:hover {
+  color: #f0b340;
+}
 
 
 .card {
@@ -163,9 +166,8 @@ header {
   color: #0f722d;
 }
 
-.arrow {
-size: 1.5rem;
-  color: #fdf1c1;
+.arrow:hover {
+  color: #f0b340;
 }
 .data{
   
