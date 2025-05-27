@@ -304,7 +304,7 @@ form {
     padding-right: 2rem;
     margin-left: 80%;
     margin-right: 20%;
-    background-color: #f0b340;
+    background-color: rgba(240, 179, 64, 0.7);
     color: #2e5c3e;
     border-radius: 90%;
     border: none;
