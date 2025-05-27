@@ -3,12 +3,16 @@ session_start();
 require __DIR__. '/../../../../database/config.php';
 
 $id = $_SESSION['id_user'];
-echo $id;
+
 $querySQL = "SELECT * FROM anuncios WHERE id_user_fk = ?";
+
 $preparedStatment = $connection->prepare($querySQL);
 $preparedStatment->bind_param("i", $id);
 $preparedStatment->execute();
 $result =$preparedStatment->get_result();
+if (!$result) {
+    die("Erro na consulta: " . $connection->error);
+}
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo '<div class="card">';
