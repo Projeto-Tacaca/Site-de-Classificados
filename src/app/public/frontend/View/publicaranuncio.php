@@ -11,7 +11,7 @@
     <div class="header">
             <a href="../view/telaDeAnuncios.php" class="back">&#8592;</a>
 
-        <h2>Seu anúncio</h2>
+        <h2>SEU ANÚNCIO</h2>
     </div>
     <main>
         <form method="post" enctype="multipart/form-data" action="../../../backend/Controller/publicarAnuncioController.php" class="anuncio-form">

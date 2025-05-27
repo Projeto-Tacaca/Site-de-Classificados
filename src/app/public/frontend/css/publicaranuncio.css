@@ -98,8 +98,9 @@ textarea {
 
 button[type="submit"] {
     margin-top: 12px;
-    background: #2e5c3e;
-    color: #fdf1c1;
+    background: #f0b340;
+  color: #2e5c3e;
+ 
     border: none;
     border-radius: 8px;
     padding: 12px 0;
@@ -110,7 +111,7 @@ button[type="submit"] {
 
 .back{
   text-decoration: none;
-  color: antiquewhite;
+  color: #fdf1c1;
   font-size: 2.5rem;
     position: absolute;
     left: 20px;
@@ -118,8 +119,10 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background: #256b3e;
+    background: #ffd182;
+  color: #0f722d;
 }
+
 
 /* Responsivo */
 @media (max-width: 800px) {

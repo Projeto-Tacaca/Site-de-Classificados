@@ -14,7 +14,7 @@
     <div class="form-box">
 
      <form action="../../../backend/Controller/registroController.php" method="post">
-       <h1>Crie sua conta</h1>
+       <h1>CRIE SUA CONTA</h1>
 
       <div style="margin-left: 10px;">
 

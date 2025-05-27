@@ -11,7 +11,7 @@
   <div class="container">
      
     <form class="login-box" action="../../../backend/Controller/loginController.php" method="post">
-       <h1>Faça seu login</h1>
+       <h1>FAÇA SEU LOGIN</h1>
         <input type="email" name="email" placeholder="E-mail" required>
       <input type="password" name="senha" placeholder="Senha"   required>
       <button>Concluir</button>
