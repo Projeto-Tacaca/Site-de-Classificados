@@ -57,12 +57,7 @@ header("Location: /Site-de-Classificados/src/app/public/frontend/View/login.php"
                         <span class="title">meus anuncios</span>   
                     </a>
                 </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon"><ion-icon name="star-half-outline"></ion-icon></span>
-                        <span class="title">favoritos</span>   
-                    </a>
-                </li>
+         
                 
                 <li class="list">
                     <a href="teladeperfil.php">
@@ -70,12 +65,7 @@ header("Location: /Site-de-Classificados/src/app/public/frontend/View/login.php"
                         <span class="title">minha conta</span>   
                     </a>
                 </li>
-                <li class="list">
-                    <a href="#">
-                        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                        <span class="title">ajuda</span>   
-                    </a>
-                </li>
+            
                 <li class="list">
                     <a href="../../../backEnd/Controller/logoutController.php">
                         <span class="icon"><ion-icon name="exit-outline"></ion-icon></span>
