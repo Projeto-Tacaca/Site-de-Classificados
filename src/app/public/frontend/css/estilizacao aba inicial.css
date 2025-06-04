@@ -49,35 +49,12 @@ div {
     width: 50%;
     display: flex;
     align-items: center;
-    overflow: hidden;
+   
     left: 25%;
     
     
 }
-.search-bar input {
-    background-color: transparent;
-    border: 0;
-    outline: 0;
-    width: 50%;
-    padding: 1rem;
-    font-size: 1rem;
-    transition: width .2s ease-in-out;
-   
-    
-}
-.search-bar label {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    right:0;
-    background-color: antiquewhite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
 
-}
 .search-bar .icon{
     position: relative;
     display: block;
@@ -85,53 +62,6 @@ div {
     height: 20px;
 
 }
-
-.search-bar .icon::after,
-.search-bar .icon::before{
-    content:"" ;
-    position: absolute;
-    display: block;
-}
-.search-bar .icon::before{
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    border: 3px solid antiquewhite;
-}
-.search-bar .icon::after{
-    width: 10px;
-    height: 3px;
-    background-color: antiquewhite;
-    transform: rotate(56deg);
-    bottom: 0;
-    right: 0;
-    border-radius: 2px;
-   
-}
-.search-bar input:focus{width:300px ;}
-
-.search-bar input:focus+label .icon::after
-.search-bar input:focus+label .icon::before{
-    width: 100%;
-    height: 3px;
-    border-radius: 3px;
-    top: 50%;
-    left: 50%;
-    border: 0;
-    background-color: antiquewhite;
-}
-.search-bar input:focus+label .icon::before{
-transform: translate(-50%, -50%) rotate(-45deg)
-}
-.search-bar input:focus+label .icon::after{
-    transform: translate(-50%, -50%) rotate(-45deg)
-}
-
-
-
-
 
 
 button:hover {
