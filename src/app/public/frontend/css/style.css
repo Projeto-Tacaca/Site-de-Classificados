@@ -149,16 +149,22 @@ body {
 .botao-foto.verde {
   background-color: #2e5c3e;
   color: white;
+  border: none;
+  border-radius: 8px;
+  size: 2rem;
 }
 .botao-foto.verde:hover {
-  background-color: #2e5c3e;
+  background-color: #49a160;
 }
 .botao-foto.vermelho {
   background-color: #dc2626;
   color: white;
+  border: none;
+   border-radius: 8px;
+   size: 2rem;
 }
 .botao-foto.vermelho:hover {
-  background-color: #b91c1c;
+  background-color: #f87171;
 }
 .nome-centralizado {
   margin-top: 0.75rem;

@@ -32,12 +32,18 @@ if(!isset($_SESSION['email']) || !isset($_SESSION['id_user'])) {
         <img id="fotoPerfil" src="" alt="Foto do usuário" class="foto-perfil-img" />
         <input type="file" id="inputFoto" accept="image/*" class="hidden" />
         <div id="botoesFoto" class="botoes-foto">
+
+
+
           <button id="btnFoto" class="botao-foto verde" aria-label="Alterar foto de perfil">
              Alterar
           </button>
           <button id="btnRemoverFoto" class="botao-foto vermelho" aria-label="Remover foto de perfil">
              Remover
           </button>
+        
+        
+        
         </div>
       </div>
       <!-- função de arredondamento de foto de perfil -->
