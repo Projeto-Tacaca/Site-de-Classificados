@@ -14,7 +14,7 @@
     <a href="../view/telaDeAnuncios.php" class="arrow">&#8592;</a>
   </header>
 
-  
+  <div class="ajuste">
     <div class="card">
       
       <div class="content">
@@ -23,6 +23,11 @@
         <button class="btn" >Falar com vendedor</button>
       </div>
     </div>
-
+ </div>
+ <button class="add">
+     <a href="publicaranuncio.php">
+    +
+    </a>
+</button>
 </body>
 </html>
