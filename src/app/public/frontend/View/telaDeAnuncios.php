@@ -89,7 +89,7 @@ header("Location: /Site-de-Classificados/src/app/public/frontend/View/login.php"
         </div>
 
 <button class="add">
-    <a href="#">
+     <a href="publicaranuncio.php">
     +
     </a>
 </button>
