@@ -18,6 +18,11 @@
       include __DIR__ . '/../../../backEnd/Controller/meusAnunciosController.php';
       ?>  
     </div>
+    <button class="add">
+     <a href="publicaranuncio.php">
+    +
+    </a>
+</button>
   </main>
 </body>
 </html>

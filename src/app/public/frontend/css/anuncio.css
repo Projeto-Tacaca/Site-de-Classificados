@@ -38,6 +38,9 @@ header {
   align-items: flex-start;
   flex-wrap: wrap;
   box-shadow: rgb(73, 73, 73) 0px 0px 10px;
+  max-height: 900px;
+  max-width: 2000px;
+  margin-inline: 20px;
 }
 
 .image-box {
@@ -51,6 +54,8 @@ header {
   left: -20px;
   margin: 5%;
   box-sizing: border-box;
+   max-height: 900px;
+  max-width: 2000px;
 }
 
 .image-box img {
@@ -60,6 +65,8 @@ header {
   object-fit: cover;
   margin: 10px 0;
   border-radius: 15px;
+   max-height: 900px;
+  max-width: 2000px;
 }
 
 /* Responsividade */
